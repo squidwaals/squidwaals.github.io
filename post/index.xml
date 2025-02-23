@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Squid&#39;s Home</title>
+        <link>https://squidwaals.github.io/post/</link>
+        <description>Recent content in Posts on Squid&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Squid Wu</copyright>
+        <lastBuildDate>Sat, 22 Feb 2025 18:04:38 +0800</lastBuildDate><atom:link href="https://squidwaals.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>N Solitons Construction</title>
+        <link>https://squidwaals.github.io/slices/n-solitons-construction/</link>
+        <pubDate>Fri, 21 Feb 2025 21:48:49 +0800</pubDate>
+        
+        <guid>https://squidwaals.github.io/slices/n-solitons-construction/</guid>
+        <description>&lt;p&gt;最近看了一点李翊神的《孤子与可积系统》，发现用达布变换构造的KdV方程的N孤子解形式很规则，感觉很新奇。但书中没有给出证明，这里试着自己推一遍。&lt;/p&gt;
+&lt;h2 id=&#34;达布定理&#34;&gt;达布定理
+&lt;/h2&gt;&lt;h2 id=&#34;朗斯基行列式求导&#34;&gt;朗斯基行列式求导
+&lt;/h2&gt;&lt;h2 id=&#34;分块矩阵行列式&#34;&gt;分块矩阵行列式
+&lt;/h2&gt;&lt;h2 id=&#34;归纳证明&#34;&gt;归纳证明
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Collections of Notes</title>
+        <link>https://squidwaals.github.io/slices/collections-of-notes/</link>
+        <pubDate>Sat, 18 Jan 2025 15:13:00 +0800</pubDate>
+        
+        <guid>https://squidwaals.github.io/slices/collections-of-notes/</guid>
+        <description>&lt;img src="https://squidwaals.github.io/slices/collections-of-notes/notes_post_pic.jpg" alt="Featured image of post Collections of Notes" /&gt;&lt;h2 id=&#34;basic&#34;&gt;basic
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/solid_summary.pdf&#34; &gt;固体物理条目&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/electrodynamics.pdf&#34; &gt;电动力学条目&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/qm_summary.pdf&#34; &gt;基础量子力学&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/pst_summary.pdf&#34; &gt;传播子与散射&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/thermo_dy.pdf&#34; &gt;热力学要点&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/linear_response.pdf&#34; &gt;线性响应关系整理&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/differentialgeometry.pdf&#34; &gt;微分几何条目&lt;/a&gt;（最早的小结，不是后来的风格，一些东西也没推完，待重制&amp;hellip;）
+（但怎么说呢，也许风格自由也是初心的体现吧？）&lt;/p&gt;
+&lt;h2 id=&#34;topic&#34;&gt;topic
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/bloch_boltzmann.pdf&#34; &gt;布洛赫输运&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/qhe_summary.pdf&#34; &gt;量子霍尔效应初步&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/sunandpermutation.pdf&#34; &gt;满足置换对称性的多体哈密顿量的$\mathfrak{su}(n)$约化&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/manybodypeierls.pdf&#34; &gt;无杂质Peierls相变温度的多体理论计算&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/FRGefimov.pdf&#34; &gt;FRG视角下的Efimov效应&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/heavypolarons.pdf&#34; &gt;平均场费米超流中的重杂质相互作用&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;just-for-fun&#34;&gt;just for fun
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/partition_fun_divergent.pdf&#34; &gt;由配分函数发散想到&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;math-tips&#34;&gt;math tips
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/high_d_taylor.pdf&#34; &gt;高维泰勒展开&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/lagrange_mul.pdf&#34; &gt;拉格朗日乘子法&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/legendre_trans.pdf&#34; &gt;勒让德变换&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/residue.pdf&#34; &gt;留数定理&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/jacobi_det.pdf&#34; &gt;雅可比行列式&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Bankrupt Probability</title>
+        <link>https://squidwaals.github.io/slices/bankrupt-probability/</link>
+        <pubDate>Sun, 05 Jan 2025 18:32:40 +0800</pubDate>
+        
+        <guid>https://squidwaals.github.io/slices/bankrupt-probability/</guid>
+        <description>&lt;p&gt;最近了解到交易中破产概率的计算，觉得很有意思，也比较简单，记录一下。&lt;/p&gt;
+&lt;p&gt;假定一个交易者胜率为$p$，每次止盈止损额度均为$s$，总亏损上限为$Ns$，那么他在市场上的破产概率$P_{b,N}$为&lt;/p&gt;
+$$
+P_{b,N} = 
+\begin{cases}
+ &amp; \left(\frac{1-p}{p}\right)^N  &amp; p\geq 0.5  \\
+ &amp; 1  &amp; p\leq 0.5
+\end{cases}.
+$$&lt;h2 id=&#34;推导&#34;&gt;推导
+&lt;/h2&gt;&lt;p&gt;假定交易者A和B进行交易，每次止盈止损额度均为$s$，A、B的总亏损上限分别为$Ns,Ms$，A的胜率为$p$。计算足够次数交易后，A把钱全部输给B的概率$P_{b,N}^M$，然后令$M\to\infty$得到$P_b$。&lt;/p&gt;
+&lt;p&gt;设A在拥有亏损额度$ns$时，破产概率为$P_{b,n}^M$。交易一次后，A有概率$p$拥有$(n+1)s$亏损额度，概率$(1-p)$拥有$(n-1)s$亏损额度，于是&lt;/p&gt;
+$$
+P_{b,n}^M = (1-p)P_{b,n-1}^M + pP_{b,n+1}^M \Rightarrow
+(1-p)(P_{b,n}^M - P_{b,n-1}^M) = p (P_{b,n+1}^M - P_{b,n}^M),
+$$$$
+\Rightarrow P^M_{b,n+1} - P^M_{b,n} = C_0\left(\frac{1-p}{p}\right)^n,
+$$&lt;p&gt;其中$C_0=P^M_{b,1}-P^M_{b,0}$为常数。求和可以得到&lt;/p&gt;
+$$
+P^M_{b,n}-P^M_{b,0}=
+\begin{cases}
+ &amp; C_0 \frac{1-(1/p-1)^n}{2-1/p},  &amp; p\neq 0.5 \\
+ &amp; n C_0,   &amp; p=0.5
+\end{cases}.
+$$$$
+C_0 = 
+\begin{cases}
+ &amp; -\frac{2-1/p}{1-(1/p-1)^{N+M}},  &amp; p\neq 0.5 \\
+ &amp; -\frac{1}{N+M},   &amp; p=0.5
+\end{cases}.
+$$&lt;p&gt;于是&lt;/p&gt;
+$$
+P^M_{b,N} = 
+\begin{cases}
+ &amp; 1 - \frac{1-(1/p-1)^N}{1-(1/p-1)^{N+M}} = \frac{(1/p-1)^N-(1/p-1)^{N+M}}{1-(1/p-1)^{N+M}},  &amp; p\neq 0.5 \\
+ &amp; 1 - \frac{N}{N+M} = \frac{M}{N+M},  &amp; p=0.5
+\end{cases}.
+$$&lt;p&gt;取$M\to\infty$，&lt;/p&gt;
+$$
+P_{b,N} = \lim_{M\to\infty} P^M_{b,N} = 
+\begin{cases}
+ &amp; \lim_{M\to\infty} \frac{(1/p-1)^N-(1/p-1)^{N+M}}{1-(1/p-1)^{N+M}}=
+ \begin{cases}
+  &amp; 1, &amp;p &lt; 0.5 \\
+  &amp; \left(\frac{1-p}{p}\right)^N, &amp;p &gt; 0.5
+ \end{cases},  &amp; p\neq 0.5\\
+ &amp; \lim_{M\to\infty} \frac{M}{N+M}=1   &amp; p=0.5
+\end{cases}
+$$&lt;p&gt;这就证明了开头的结论。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Examples of Symbolic Calc</title>
+        <link>https://squidwaals.github.io/slices/examples-of-symbolic-calc/</link>
+        <pubDate>Tue, 30 Apr 2024 10:52:28 +0800</pubDate>
+        
+        <guid>https://squidwaals.github.io/slices/examples-of-symbolic-calc/</guid>
+        <description>&lt;h2 id=&#34;mathematica&#34;&gt;Mathematica
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/AngleIntegratedToCGPackage.m&#34; &gt;球谐函数积分化为CG系数&lt;/a&gt;（AngleIntegratedToCGPackage）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/spherical_matrix_elements.nb&#34; &gt;利用上面的包AngleIntegratedToCGPackage计算角向矩阵元&lt;/a&gt;（重复&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1103/PhysRevLett.130.183001&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这篇文章&lt;/a&gt;补充材料中的S15式）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/QuantumSimplificationPackage.m&#34; &gt;$\braket{bar|ket}$的内积直积化简&lt;/a&gt;（QuantumSimplificationPackage：去掉运算符的保护，重新定义化简规则）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/microwave_shielding.nb&#34; &gt;利用上面的包QuantumSimplificationPackage计算哈密顿量矩阵元&lt;/a&gt;（重复&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1103/PhysRevLett.130.183001&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这篇文章&lt;/a&gt;补充材料中的S1小结）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/show_bspline.nb&#34; &gt;利用一些技巧得到节点为变量时B样条的显式表达式&lt;/a&gt;（mma中好像只能直接得到节点为常数时B样条表达式）&lt;/p&gt;
+&lt;h2 id=&#34;sympy&#34;&gt;Sympy
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/compare_series_and_exact_solution.ipynb&#34; &gt;表达式中途展开+符号变量替换求复杂色散关系展开式&lt;/a&gt;（重复&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1103/PhysRevLett.125.253601&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这篇文章&lt;/a&gt;中的色散关系）&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

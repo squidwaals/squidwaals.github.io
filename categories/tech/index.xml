@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tech on Squid&#39;s Home</title>
+        <link>https://squidwaals.github.io/categories/tech/</link>
+        <description>Recent content in Tech on Squid&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Squid Wu</copyright><atom:link href="https://squidwaals.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Examples of Symbolic Calc</title>
+        <link>https://squidwaals.github.io/slices/examples-of-symbolic-calc/</link>
+        <pubDate>Tue, 30 Apr 2024 10:52:28 +0800</pubDate>
+        
+        <guid>https://squidwaals.github.io/slices/examples-of-symbolic-calc/</guid>
+        <description>&lt;h2 id=&#34;mathematica&#34;&gt;Mathematica
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/AngleIntegratedToCGPackage.m&#34; &gt;球谐函数积分化为CG系数&lt;/a&gt;（AngleIntegratedToCGPackage）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/spherical_matrix_elements.nb&#34; &gt;利用上面的包AngleIntegratedToCGPackage计算角向矩阵元&lt;/a&gt;（重复&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1103/PhysRevLett.130.183001&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这篇文章&lt;/a&gt;补充材料中的S15式）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/QuantumSimplificationPackage.m&#34; &gt;$\braket{bar|ket}$的内积直积化简&lt;/a&gt;（QuantumSimplificationPackage：去掉运算符的保护，重新定义化简规则）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/microwave_shielding.nb&#34; &gt;利用上面的包QuantumSimplificationPackage计算哈密顿量矩阵元&lt;/a&gt;（重复&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1103/PhysRevLett.130.183001&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这篇文章&lt;/a&gt;补充材料中的S1小结）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/show_bspline.nb&#34; &gt;利用一些技巧得到节点为变量时B样条的显式表达式&lt;/a&gt;（mma中好像只能直接得到节点为常数时B样条表达式）&lt;/p&gt;
+&lt;h2 id=&#34;sympy&#34;&gt;Sympy
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/compare_series_and_exact_solution.ipynb&#34; &gt;表达式中途展开+符号变量替换求复杂色散关系展开式&lt;/a&gt;（重复&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1103/PhysRevLett.125.253601&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这篇文章&lt;/a&gt;中的色散关系）&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Display on Squid&#39;s Home</title>
+        <link>https://squidwaals.github.io/tags/display/</link>
+        <description>Recent content in Display on Squid&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Squid Wu</copyright>
+        <lastBuildDate>Fri, 21 Feb 2025 21:56:59 +0800</lastBuildDate><atom:link href="https://squidwaals.github.io/tags/display/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>N Solitons Construction</title>
+        <link>https://squidwaals.github.io/slices/n-solitons-construction/</link>
+        <pubDate>Fri, 21 Feb 2025 21:48:49 +0800</pubDate>
+        
+        <guid>https://squidwaals.github.io/slices/n-solitons-construction/</guid>
+        <description>&lt;p&gt;最近看了一点李翊神的《孤子与可积系统》，发现用达布变换构造的KdV方程的N孤子解形式很规则，感觉很新奇。但书中没有给出证明，这里试着自己推一遍。&lt;/p&gt;
+&lt;h2 id=&#34;达布定理&#34;&gt;达布定理
+&lt;/h2&gt;&lt;h2 id=&#34;朗斯基行列式求导&#34;&gt;朗斯基行列式求导
+&lt;/h2&gt;&lt;h2 id=&#34;分块矩阵行列式&#34;&gt;分块矩阵行列式
+&lt;/h2&gt;&lt;h2 id=&#34;归纳证明&#34;&gt;归纳证明
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Bankrupt Probability</title>
+        <link>https://squidwaals.github.io/slices/bankrupt-probability/</link>
+        <pubDate>Sun, 05 Jan 2025 18:32:40 +0800</pubDate>
+        
+        <guid>https://squidwaals.github.io/slices/bankrupt-probability/</guid>
+        <description>&lt;p&gt;最近了解到交易中破产概率的计算，觉得很有意思，也比较简单，记录一下。&lt;/p&gt;
+&lt;p&gt;假定一个交易者胜率为$p$，每次止盈止损额度均为$s$，总亏损上限为$Ns$，那么他在市场上的破产概率$P_{b,N}$为&lt;/p&gt;
+$$
+P_{b,N} = 
+\begin{cases}
+ &amp; \left(\frac{1-p}{p}\right)^N  &amp; p\geq 0.5  \\
+ &amp; 1  &amp; p\leq 0.5
+\end{cases}.
+$$&lt;h2 id=&#34;推导&#34;&gt;推导
+&lt;/h2&gt;&lt;p&gt;假定交易者A和B进行交易，每次止盈止损额度均为$s$，A、B的总亏损上限分别为$Ns,Ms$，A的胜率为$p$。计算足够次数交易后，A把钱全部输给B的概率$P_{b,N}^M$，然后令$M\to\infty$得到$P_b$。&lt;/p&gt;
+&lt;p&gt;设A在拥有亏损额度$ns$时，破产概率为$P_{b,n}^M$。交易一次后，A有概率$p$拥有$(n+1)s$亏损额度，概率$(1-p)$拥有$(n-1)s$亏损额度，于是&lt;/p&gt;
+$$
+P_{b,n}^M = (1-p)P_{b,n-1}^M + pP_{b,n+1}^M \Rightarrow
+(1-p)(P_{b,n}^M - P_{b,n-1}^M) = p (P_{b,n+1}^M - P_{b,n}^M),
+$$$$
+\Rightarrow P^M_{b,n+1} - P^M_{b,n} = C_0\left(\frac{1-p}{p}\right)^n,
+$$&lt;p&gt;其中$C_0=P^M_{b,1}-P^M_{b,0}$为常数。求和可以得到&lt;/p&gt;
+$$
+P^M_{b,n}-P^M_{b,0}=
+\begin{cases}
+ &amp; C_0 \frac{1-(1/p-1)^n}{2-1/p},  &amp; p\neq 0.5 \\
+ &amp; n C_0,   &amp; p=0.5
+\end{cases}.
+$$$$
+C_0 = 
+\begin{cases}
+ &amp; -\frac{2-1/p}{1-(1/p-1)^{N+M}},  &amp; p\neq 0.5 \\
+ &amp; -\frac{1}{N+M},   &amp; p=0.5
+\end{cases}.
+$$&lt;p&gt;于是&lt;/p&gt;
+$$
+P^M_{b,N} = 
+\begin{cases}
+ &amp; 1 - \frac{1-(1/p-1)^N}{1-(1/p-1)^{N+M}} = \frac{(1/p-1)^N-(1/p-1)^{N+M}}{1-(1/p-1)^{N+M}},  &amp; p\neq 0.5 \\
+ &amp; 1 - \frac{N}{N+M} = \frac{M}{N+M},  &amp; p=0.5
+\end{cases}.
+$$&lt;p&gt;取$M\to\infty$，&lt;/p&gt;
+$$
+P_{b,N} = \lim_{M\to\infty} P^M_{b,N} = 
+\begin{cases}
+ &amp; \lim_{M\to\infty} \frac{(1/p-1)^N-(1/p-1)^{N+M}}{1-(1/p-1)^{N+M}}=
+ \begin{cases}
+  &amp; 1, &amp;p &lt; 0.5 \\
+  &amp; \left(\frac{1-p}{p}\right)^N, &amp;p &gt; 0.5
+ \end{cases},  &amp; p\neq 0.5\\
+ &amp; \lim_{M\to\infty} \frac{M}{N+M}=1   &amp; p=0.5
+\end{cases}
+$$&lt;p&gt;这就证明了开头的结论。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
