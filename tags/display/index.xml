@@ -2,17 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Display on Squid&#39;s Home</title>
-        <link>https://squidwaals.github.io/tags/display/</link>
+        <link>http://localhost:1313/tags/display/</link>
         <description>Recent content in Display on Squid&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Squid Wu</copyright>
-        <lastBuildDate>Fri, 21 Feb 2025 21:56:59 +0800</lastBuildDate><atom:link href="https://squidwaals.github.io/tags/display/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 23 Mar 2025 18:02:27 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/display/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Some Plots</title>
+        <link>http://localhost:1313/slices/some-plots/</link>
+        <pubDate>Sat, 08 Mar 2025 17:37:49 +0800</pubDate>
+        
+        <guid>http://localhost:1313/slices/some-plots/</guid>
+        <description>&lt;h2 id=&#34;boltzmann&#34;&gt;Boltzmann
+&lt;/h2&gt;&lt;p&gt;这两天看到关于希尔伯特第六问题的新闻，突然想起&amp;hellip;
+&lt;img src=&#34;http://localhost:1313/slices/some-plots/pics/boltzmann.png&#34;
+	width=&#34;2058&#34;
+	height=&#34;1906&#34;
+	srcset=&#34;http://localhost:1313/slices/some-plots/pics/boltzmann_hu3442495465790968621.png 480w, http://localhost:1313/slices/some-plots/pics/boltzmann_hu13097164278547082902.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;107&#34;
+		data-flex-basis=&#34;259px&#34;
+	
+&gt;
+（多年以后，又一次刷到这条新闻的时候，吴吴会想起他为做公选课视频硬描玻尔兹曼的那个下午）&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>N Solitons Construction</title>
-        <link>https://squidwaals.github.io/slices/n-solitons-construction/</link>
+        <link>http://localhost:1313/slices/n-solitons-construction/</link>
         <pubDate>Fri, 21 Feb 2025 21:48:49 +0800</pubDate>
         
-        <guid>https://squidwaals.github.io/slices/n-solitons-construction/</guid>
+        <guid>http://localhost:1313/slices/n-solitons-construction/</guid>
         <description>&lt;p&gt;最近看了一点李翊神的《孤子与可积系统》，发现用达布变换构造的KdV方程的N孤子解形式很规则，感觉很新奇。但书中没有给出证明，这里试着自己推一遍。&lt;/p&gt;
 &lt;h2 id=&#34;达布定理&#34;&gt;达布定理
 &lt;/h2&gt;&lt;h2 id=&#34;朗斯基行列式求导&#34;&gt;朗斯基行列式求导
@@ -22,10 +45,10 @@
         </item>
         <item>
         <title>Bankrupt Probability</title>
-        <link>https://squidwaals.github.io/slices/bankrupt-probability/</link>
+        <link>http://localhost:1313/slices/bankrupt-probability/</link>
         <pubDate>Sun, 05 Jan 2025 18:32:40 +0800</pubDate>
         
-        <guid>https://squidwaals.github.io/slices/bankrupt-probability/</guid>
+        <guid>http://localhost:1313/slices/bankrupt-probability/</guid>
         <description>&lt;p&gt;最近了解到交易中破产概率的计算，觉得很有意思，也比较简单，记录一下。&lt;/p&gt;
 &lt;p&gt;假定一个交易者胜率为$p$，每次止盈止损额度均为$s$，总亏损上限为$Ns$，那么他在市场上的破产概率$P_{b,N}$为&lt;/p&gt;
 $$
@@ -74,6 +97,53 @@ P_{b,N} = \lim_{M\to\infty} P^M_{b,N} =
  &amp; \lim_{M\to\infty} \frac{M}{N+M}=1   &amp; p=0.5
 \end{cases}
 $$&lt;p&gt;这就证明了开头的结论。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Some Toys</title>
+        <link>http://localhost:1313/slices/some-toys/</link>
+        <pubDate>Sun, 02 Jun 2024 17:38:50 +0800</pubDate>
+        
+        <guid>http://localhost:1313/slices/some-toys/</guid>
+        <description>&lt;h2 id=&#34;回忆火车&#34;&gt;回忆火车
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slices/some-toys/pics/memory_train.png&#34;
+	width=&#34;1492&#34;
+	height=&#34;1120&#34;
+	srcset=&#34;http://localhost:1313/slices/some-toys/pics/memory_train_hu15881056508101053583.png 480w, http://localhost:1313/slices/some-toys/pics/memory_train_hu7591090628859690966.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;库洛米&#34;&gt;库洛米
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slices/some-toys/pics/kuromi.png&#34;
+	width=&#34;1120&#34;
+	height=&#34;1494&#34;
+	srcset=&#34;http://localhost:1313/slices/some-toys/pics/kuromi_hu3730179297079824029.png 480w, http://localhost:1313/slices/some-toys/pics/kuromi_hu18323365855277091180.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;74&#34;
+		data-flex-basis=&#34;179px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;小熊猫&#34;&gt;小熊猫
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slices/some-toys/pics/redpanda.png&#34;
+	width=&#34;1706&#34;
+	height=&#34;1279&#34;
+	srcset=&#34;http://localhost:1313/slices/some-toys/pics/redpanda_hu5538451272712612881.png 480w, http://localhost:1313/slices/some-toys/pics/redpanda_hu15822502963266792923.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tech on Squid&#39;s Home</title>
-        <link>https://squidwaals.github.io/categories/tech/</link>
+        <link>http://localhost:1313/categories/tech/</link>
         <description>Recent content in Tech on Squid&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>Squid Wu</copyright><atom:link href="https://squidwaals.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>Squid Wu</copyright><atom:link href="http://localhost:1313/categories/tech/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Examples of Symbolic Calc</title>
-        <link>https://squidwaals.github.io/slices/examples-of-symbolic-calc/</link>
+        <link>http://localhost:1313/slices/examples-of-symbolic-calc/</link>
         <pubDate>Tue, 30 Apr 2024 10:52:28 +0800</pubDate>
         
-        <guid>https://squidwaals.github.io/slices/examples-of-symbolic-calc/</guid>
+        <guid>http://localhost:1313/slices/examples-of-symbolic-calc/</guid>
         <description>&lt;h2 id=&#34;mathematica&#34;&gt;Mathematica
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/AngleIntegratedToCGPackage.m&#34; &gt;球谐函数积分化为CG系数&lt;/a&gt;（AngleIntegratedToCGPackage）&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/spherical_matrix_elements.nb&#34; &gt;利用上面的包AngleIntegratedToCGPackage计算角向矩阵元&lt;/a&gt;（重复&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1103/PhysRevLett.130.183001&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

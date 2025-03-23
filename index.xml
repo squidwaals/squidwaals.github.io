@@ -2,16 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Squid&#39;s Home</title>
-        <link>https://squidwaals.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description>Recent content on Squid&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>Squid Wu</copyright><atom:link href="https://squidwaals.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>Squid Wu</copyright><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Some Plots</title>
+        <link>http://localhost:1313/slices/some-plots/</link>
+        <pubDate>Sat, 08 Mar 2025 17:37:49 +0800</pubDate>
+        
+        <guid>http://localhost:1313/slices/some-plots/</guid>
+        <description>&lt;h2 id=&#34;boltzmann&#34;&gt;Boltzmann
+&lt;/h2&gt;&lt;p&gt;这两天看到关于希尔伯特第六问题的新闻，突然想起&amp;hellip;
+&lt;img src=&#34;http://localhost:1313/slices/some-plots/pics/boltzmann.png&#34;
+	width=&#34;2058&#34;
+	height=&#34;1906&#34;
+	srcset=&#34;http://localhost:1313/slices/some-plots/pics/boltzmann_hu3442495465790968621.png 480w, http://localhost:1313/slices/some-plots/pics/boltzmann_hu13097164278547082902.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;107&#34;
+		data-flex-basis=&#34;259px&#34;
+	
+&gt;
+（多年以后，又一次刷到这条新闻的时候，吴吴会想起他为做公选课视频硬描玻尔兹曼的那个下午）&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>N Solitons Construction</title>
-        <link>https://squidwaals.github.io/slices/n-solitons-construction/</link>
+        <link>http://localhost:1313/slices/n-solitons-construction/</link>
         <pubDate>Fri, 21 Feb 2025 21:48:49 +0800</pubDate>
         
-        <guid>https://squidwaals.github.io/slices/n-solitons-construction/</guid>
+        <guid>http://localhost:1313/slices/n-solitons-construction/</guid>
         <description>&lt;p&gt;最近看了一点李翊神的《孤子与可积系统》，发现用达布变换构造的KdV方程的N孤子解形式很规则，感觉很新奇。但书中没有给出证明，这里试着自己推一遍。&lt;/p&gt;
 &lt;h2 id=&#34;达布定理&#34;&gt;达布定理
 &lt;/h2&gt;&lt;h2 id=&#34;朗斯基行列式求导&#34;&gt;朗斯基行列式求导
@@ -21,19 +44,19 @@
         </item>
         <item>
         <title>Books</title>
-        <link>https://squidwaals.github.io/books/</link>
+        <link>http://localhost:1313/books/</link>
         <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://squidwaals.github.io/books/</guid>
+        <guid>http://localhost:1313/books/</guid>
         <description></description>
         </item>
         <item>
         <title>Collections of Notes</title>
-        <link>https://squidwaals.github.io/slices/collections-of-notes/</link>
+        <link>http://localhost:1313/slices/collections-of-notes/</link>
         <pubDate>Sat, 18 Jan 2025 15:13:00 +0800</pubDate>
         
-        <guid>https://squidwaals.github.io/slices/collections-of-notes/</guid>
-        <description>&lt;img src="https://squidwaals.github.io/slices/collections-of-notes/notes_post_pic.jpg" alt="Featured image of post Collections of Notes" /&gt;&lt;h2 id=&#34;basic&#34;&gt;basic
+        <guid>http://localhost:1313/slices/collections-of-notes/</guid>
+        <description>&lt;img src="http://localhost:1313/slices/collections-of-notes/notes_post_pic.jpg" alt="Featured image of post Collections of Notes" /&gt;&lt;h2 id=&#34;basic&#34;&gt;basic
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/solid_summary.pdf&#34; &gt;固体物理条目&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/electrodynamics.pdf&#34; &gt;电动力学条目&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/qm_summary.pdf&#34; &gt;基础量子力学&lt;/a&gt;&lt;/p&gt;
@@ -51,6 +74,8 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/heavypolarons.pdf&#34; &gt;平均场费米超流中的重杂质相互作用&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;just-for-fun&#34;&gt;just for fun
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/partition_fun_divergent.pdf&#34; &gt;由配分函数发散想到&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;short-notes&#34;&gt;short notes
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/spin_squeezing.pdf&#34; &gt;自旋压缩态相关背景&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;math-tips&#34;&gt;math tips
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/high_d_taylor.pdf&#34; &gt;高维泰勒展开&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/lagrange_mul.pdf&#34; &gt;拉格朗日乘子法&lt;/a&gt;&lt;/p&gt;
@@ -61,10 +86,10 @@
         </item>
         <item>
         <title>About</title>
-        <link>https://squidwaals.github.io/about/</link>
+        <link>http://localhost:1313/about/</link>
         <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://squidwaals.github.io/about/</guid>
+        <guid>http://localhost:1313/about/</guid>
         <description>&lt;p&gt;本站主要用于记录本人的一些生活片段、学习笔记、自娱自乐的“民科式”文章和一些自觉比较有意思的东西。希望这里可以有比较多的&lt;strong&gt;生活向&lt;/strong&gt;的内容。&lt;/p&gt;
 &lt;p&gt;主页上 Categories 是按内容分类，Tags 是按呈现形式分类（提供文件或是页内展示）。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“学术方面”&lt;/strong&gt;，尽管本人有相关背景，但是由于自身能力有限，以及多是没有和别人充分讨论过的想法，所以本站的相关内容&lt;strong&gt;不太能当作严肃的东西&lt;/strong&gt;来对待。&lt;/p&gt;
@@ -78,10 +103,10 @@
         </item>
         <item>
         <title>Bankrupt Probability</title>
-        <link>https://squidwaals.github.io/slices/bankrupt-probability/</link>
+        <link>http://localhost:1313/slices/bankrupt-probability/</link>
         <pubDate>Sun, 05 Jan 2025 18:32:40 +0800</pubDate>
         
-        <guid>https://squidwaals.github.io/slices/bankrupt-probability/</guid>
+        <guid>http://localhost:1313/slices/bankrupt-probability/</guid>
         <description>&lt;p&gt;最近了解到交易中破产概率的计算，觉得很有意思，也比较简单，记录一下。&lt;/p&gt;
 &lt;p&gt;假定一个交易者胜率为$p$，每次止盈止损额度均为$s$，总亏损上限为$Ns$，那么他在市场上的破产概率$P_{b,N}$为&lt;/p&gt;
 $$
@@ -133,11 +158,58 @@ $$&lt;p&gt;这就证明了开头的结论。&lt;/p&gt;
 </description>
         </item>
         <item>
+        <title>Some Toys</title>
+        <link>http://localhost:1313/slices/some-toys/</link>
+        <pubDate>Sun, 02 Jun 2024 17:38:50 +0800</pubDate>
+        
+        <guid>http://localhost:1313/slices/some-toys/</guid>
+        <description>&lt;h2 id=&#34;回忆火车&#34;&gt;回忆火车
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slices/some-toys/pics/memory_train.png&#34;
+	width=&#34;1492&#34;
+	height=&#34;1120&#34;
+	srcset=&#34;http://localhost:1313/slices/some-toys/pics/memory_train_hu15881056508101053583.png 480w, http://localhost:1313/slices/some-toys/pics/memory_train_hu7591090628859690966.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;库洛米&#34;&gt;库洛米
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slices/some-toys/pics/kuromi.png&#34;
+	width=&#34;1120&#34;
+	height=&#34;1494&#34;
+	srcset=&#34;http://localhost:1313/slices/some-toys/pics/kuromi_hu3730179297079824029.png 480w, http://localhost:1313/slices/some-toys/pics/kuromi_hu18323365855277091180.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;74&#34;
+		data-flex-basis=&#34;179px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;小熊猫&#34;&gt;小熊猫
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slices/some-toys/pics/redpanda.png&#34;
+	width=&#34;1706&#34;
+	height=&#34;1279&#34;
+	srcset=&#34;http://localhost:1313/slices/some-toys/pics/redpanda_hu5538451272712612881.png 480w, http://localhost:1313/slices/some-toys/pics/redpanda_hu15822502963266792923.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Examples of Symbolic Calc</title>
-        <link>https://squidwaals.github.io/slices/examples-of-symbolic-calc/</link>
+        <link>http://localhost:1313/slices/examples-of-symbolic-calc/</link>
         <pubDate>Tue, 30 Apr 2024 10:52:28 +0800</pubDate>
         
-        <guid>https://squidwaals.github.io/slices/examples-of-symbolic-calc/</guid>
+        <guid>http://localhost:1313/slices/examples-of-symbolic-calc/</guid>
         <description>&lt;h2 id=&#34;mathematica&#34;&gt;Mathematica
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/AngleIntegratedToCGPackage.m&#34; &gt;球谐函数积分化为CG系数&lt;/a&gt;（AngleIntegratedToCGPackage）&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;code_dir/spherical_matrix_elements.nb&#34; &gt;利用上面的包AngleIntegratedToCGPackage计算角向矩阵元&lt;/a&gt;（重复&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1103/PhysRevLett.130.183001&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -153,26 +225,26 @@ $$&lt;p&gt;这就证明了开头的结论。&lt;/p&gt;
         </item>
         <item>
         <title>Archives</title>
-        <link>https://squidwaals.github.io/archives/</link>
+        <link>http://localhost:1313/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://squidwaals.github.io/archives/</guid>
+        <guid>http://localhost:1313/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Links</title>
-        <link>https://squidwaals.github.io/links/</link>
+        <link>http://localhost:1313/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://squidwaals.github.io/links/</guid>
+        <guid>http://localhost:1313/links/</guid>
         <description></description>
         </item>
         <item>
         <title>Search</title>
-        <link>https://squidwaals.github.io/search/</link>
+        <link>http://localhost:1313/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://squidwaals.github.io/search/</guid>
+        <guid>http://localhost:1313/search/</guid>
         <description></description>
         </item>
         

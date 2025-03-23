@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Learning on Squid&#39;s Home</title>
-        <link>https://squidwaals.github.io/categories/learning/</link>
+        <link>http://localhost:1313/categories/learning/</link>
         <description>Recent content in Learning on Squid&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>Squid Wu</copyright><atom:link href="https://squidwaals.github.io/categories/learning/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>Squid Wu</copyright><atom:link href="http://localhost:1313/categories/learning/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>N Solitons Construction</title>
-        <link>https://squidwaals.github.io/slices/n-solitons-construction/</link>
+        <link>http://localhost:1313/slices/n-solitons-construction/</link>
         <pubDate>Fri, 21 Feb 2025 21:48:49 +0800</pubDate>
         
-        <guid>https://squidwaals.github.io/slices/n-solitons-construction/</guid>
+        <guid>http://localhost:1313/slices/n-solitons-construction/</guid>
         <description>&lt;p&gt;最近看了一点李翊神的《孤子与可积系统》，发现用达布变换构造的KdV方程的N孤子解形式很规则，感觉很新奇。但书中没有给出证明，这里试着自己推一遍。&lt;/p&gt;
 &lt;h2 id=&#34;达布定理&#34;&gt;达布定理
 &lt;/h2&gt;&lt;h2 id=&#34;朗斯基行列式求导&#34;&gt;朗斯基行列式求导
@@ -21,11 +21,11 @@
         </item>
         <item>
         <title>Collections of Notes</title>
-        <link>https://squidwaals.github.io/slices/collections-of-notes/</link>
+        <link>http://localhost:1313/slices/collections-of-notes/</link>
         <pubDate>Sat, 18 Jan 2025 15:13:00 +0800</pubDate>
         
-        <guid>https://squidwaals.github.io/slices/collections-of-notes/</guid>
-        <description>&lt;img src="https://squidwaals.github.io/slices/collections-of-notes/notes_post_pic.jpg" alt="Featured image of post Collections of Notes" /&gt;&lt;h2 id=&#34;basic&#34;&gt;basic
+        <guid>http://localhost:1313/slices/collections-of-notes/</guid>
+        <description>&lt;img src="http://localhost:1313/slices/collections-of-notes/notes_post_pic.jpg" alt="Featured image of post Collections of Notes" /&gt;&lt;h2 id=&#34;basic&#34;&gt;basic
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/solid_summary.pdf&#34; &gt;固体物理条目&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/electrodynamics.pdf&#34; &gt;电动力学条目&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/qm_summary.pdf&#34; &gt;基础量子力学&lt;/a&gt;&lt;/p&gt;
@@ -43,6 +43,8 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/heavypolarons.pdf&#34; &gt;平均场费米超流中的重杂质相互作用&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;just-for-fun&#34;&gt;just for fun
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/partition_fun_divergent.pdf&#34; &gt;由配分函数发散想到&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;short-notes&#34;&gt;short notes
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/spin_squeezing.pdf&#34; &gt;自旋压缩态相关背景&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;math-tips&#34;&gt;math tips
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/high_d_taylor.pdf&#34; &gt;高维泰勒展开&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/lagrange_mul.pdf&#34; &gt;拉格朗日乘子法&lt;/a&gt;&lt;/p&gt;
@@ -53,10 +55,10 @@
         </item>
         <item>
         <title>Bankrupt Probability</title>
-        <link>https://squidwaals.github.io/slices/bankrupt-probability/</link>
+        <link>http://localhost:1313/slices/bankrupt-probability/</link>
         <pubDate>Sun, 05 Jan 2025 18:32:40 +0800</pubDate>
         
-        <guid>https://squidwaals.github.io/slices/bankrupt-probability/</guid>
+        <guid>http://localhost:1313/slices/bankrupt-probability/</guid>
         <description>&lt;p&gt;最近了解到交易中破产概率的计算，觉得很有意思，也比较简单，记录一下。&lt;/p&gt;
 &lt;p&gt;假定一个交易者胜率为$p$，每次止盈止损额度均为$s$，总亏损上限为$Ns$，那么他在市场上的破产概率$P_{b,N}$为&lt;/p&gt;
 $$
