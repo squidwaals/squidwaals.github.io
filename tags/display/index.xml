@@ -7,7 +7,333 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Squid Wu</copyright>
-        <lastBuildDate>Sun, 23 Mar 2025 18:02:27 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/display/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 05 Apr 2025 18:39:39 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/display/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>N Solitons Construction of KdV eq</title>
+        <link>http://localhost:1313/slices/n-solitons-construction-of-kdv-eq/</link>
+        <pubDate>Fri, 04 Apr 2025 17:40:49 +0800</pubDate>
+        
+        <guid>http://localhost:1313/slices/n-solitons-construction-of-kdv-eq/</guid>
+        <description>&lt;p&gt;最近看了一点李翊神的《孤子与可积系统》，发现用达布变换构造的KdV方程的N孤子解形式很规则，感觉很新奇。但书中没有给出证明，这里试着自己推一遍。&lt;/p&gt;
+&lt;h2 id=&#34;前置信息&#34;&gt;前置信息
+&lt;/h2&gt;&lt;p&gt;假定$\phi$满足谱方程$L\phi=\lambda \phi$，同时又满足$\phi_t=A\phi$，可以导出$L,A$满足拉克斯方程$L_t =[A,L]$。&lt;/p&gt;
+&lt;p&gt;若选取$L$为薛定谔算子$L=\partial_{xx}+u(x,t)$，$A$为反对称算子$A=-4\left(\partial_{xxx}+\frac{3}{4}u\partial_x+\partial_x \frac{3}{4}u\cdot\right)$，代入拉克斯方程可以得到$u$满足KdV方程&lt;/p&gt;
+$$
+u_t + u_{xxx} + 6 u u_x = 0
+$$&lt;p&gt;$L\phi=\lambda\phi$对$x$求导后，代入$\phi_t=A\phi$中消去$\phi_{xxx}$项，得到$\phi$满足的另一个方程&lt;/p&gt;
+$$
+\phi_t = u_x\phi - (4\lambda+2u)\phi_x
+$$&lt;p&gt;这个推导可以逆过来，从$\phi$满足$L\phi=\lambda\phi$和$\phi_t = u_x\phi - (4\lambda+2u)\phi_x$可以得出$\phi_t=A\phi$，从而导出$u$满足KdV方程。&lt;/p&gt;
+&lt;h2 id=&#34;达布定理&#34;&gt;达布定理
+&lt;/h2&gt;&lt;p&gt;假定${\phi,u}$是满足如下方程的一组解&lt;/p&gt;
+$$
+\begin{cases}
+\phi_{xx}+u\phi=\lambda \phi \\
+\phi_t = u_x\phi - (4\lambda+2u)\phi_x \\
+\Rightarrow (u_t + u_{xxx} + 6 u u_x = 0)
+\end{cases}
+$$&lt;p&gt;${f,u}$是谱参数不同的另一组解&lt;/p&gt;
+$$
+\begin{cases}
+f_{xx}+uf=\lambda_1 f \\
+f_t = u_x f - (4\lambda_1+2u)f_x \\
+\Rightarrow (u_t + u_{xxx} + 6 u u_x = 0)
+\end{cases}
+$$&lt;p&gt;作达布变换&lt;/p&gt;
+$$
+\begin{cases}
+\bar{\phi} = \phi_x - \frac{f_x}{f}\phi \\
+\bar{u} = u + 2[\ln f]_{xx}
+\end{cases}
+$$&lt;p&gt;可以证明${\bar{\phi},\bar{u}}$也满足谱参数为$\lambda$的方程&lt;/p&gt;
+$$
+\begin{cases}
+\bar{\phi}_{xx}+\bar{u}\bar{\phi}=\lambda \bar{\phi} \\
+\bar{\phi}_t = \bar{u}_x\bar{\phi} - (4\lambda+2\bar{u})\bar{\phi}_x \\
+\Rightarrow (\bar{u}_t + \bar{u}_{xxx} + 6 \bar{u} \bar{u}_x = 0)
+\end{cases}
+$$&lt;p&gt;于是通过这种方式就实现了从KdV方程的一个解$u$出发构造另一个解$\bar{u}$。&lt;/p&gt;
+&lt;h2 id=&#34;双孤子解&#34;&gt;双孤子解
+&lt;/h2&gt;&lt;p&gt;选取初始种子$u[0]=0$，对应的解$\phi[0]=f(\lambda)$。记$f(\lambda_1)$为$u=0$时另一个谱参数$\lambda_1$下的解，那么由达布变换&lt;/p&gt;
+$$
+\begin{cases}
+\phi[1]= f_x(\lambda) - \frac{f_x(\lambda_1)}{f(\lambda_1)}f(\lambda) = \frac{f_x(\lambda)f(\lambda_1)-f(\lambda)f_x(\lambda_1)}{f(\lambda_1)} \\
+u[1]= 2[\ln f(\lambda_1)]_{xx}
+\end{cases}
+$$&lt;p&gt;${\phi[1],u[1]}$满足&lt;/p&gt;
+$$
+\begin{cases}
+\phi[1]_{xx}+u[1]\phi[1]=\lambda \phi[1] \\
+\phi[1]_t = u[1]_x\phi[1] - (4\lambda+2u[1])\phi[1]_x \\
+\Rightarrow (u[1]_t + u[1]_{xxx} + 6 u[1] u[1]_x = 0)
+\end{cases}
+$$&lt;p&gt;由于$u[1]$和$\lambda$没有关系，容易看出可以存在$f[1]$满足&lt;/p&gt;
+$$
+\begin{cases}
+f[1]_{xx}+u[1]f[1]=\lambda_2 f[1] \\
+f[1]_t = u[1]_x f[1] - (4\lambda_2+2u[1])f[1]_x \\
+\Rightarrow (u[1]_t + u[1]_{xxx} + 6 u[1] u[1]_x = 0)
+\end{cases}
+$$$$
+f[1]= \frac{f_x(\lambda_2)f(\lambda_1)-f(\lambda_2)f_x(\lambda_1)}{f(\lambda_1)} 
+$$&lt;p&gt;其中$f(\lambda_2)$是$u=0$时谱参数为$\lambda_2$时的解。于是我们可以利用$\phi[1],u[1],f[1]$继续做达布变换得到双孤子解&lt;/p&gt;
+$$
+\begin{cases}
+\phi[2]= \phi_x[1] - \frac{f_x[1]}{f[1]}\phi[1]=
+\frac{
+\left|
+\begin{array}{ccc}
+f(\lambda_1) &amp;f_x(\lambda_1) &amp;f_{xx}(\lambda_1) \\
+f(\lambda_2) &amp;f_x(\lambda_2) &amp;f_{xx}(\lambda_2) \\
+f(\lambda) &amp;f_x(\lambda) &amp;f_{xx}(\lambda)
+\end{array}\right|
+}
+{\left|
+\begin{array}{cc}
+f(\lambda_1) &amp;f_x(\lambda_1) \\
+f(\lambda_2) &amp;f_x(\lambda_2)
+\end{array}\right|}=\frac{w[f(\lambda_1),f(\lambda_2),f(\lambda)]}{w[f(\lambda_1),f(\lambda_2)]}
+\\
+u[2]= u[1] + 2[\ln f[1]]_{xx} = 2\left[\ln \left|
+\begin{array}{cc}
+f(\lambda_1) &amp; f_x(\lambda_1) \\
+f(\lambda_2) &amp; f_x(\lambda_2)
+\end{array}\right|\right]_{xx}=2[\ln w[f(\lambda_1),f(\lambda_2)]]_{xx}
+\end{cases}
+$$&lt;p&gt;其中$w[\cdots]$是朗斯基行列式。&lt;/p&gt;
+&lt;h2 id=&#34;n孤子解&#34;&gt;N孤子解
+&lt;/h2&gt;&lt;p&gt;从上面的结果可以猜测$n$孤子解的形式&lt;/p&gt;
+$$
+\begin{cases}
+\phi[n] = \frac{w[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda)]}{w[f(\lambda_1),\cdots,f(\lambda_n)]} \\
+u[n] = 2[\ln w[f(\lambda_1),\cdots,f(\lambda_n)]]_{xx}
+\end{cases}
+$$&lt;p&gt;下面将通过归纳法证明这个式子，不过在此之前先推导一些朗斯基行列式相关的公式。&lt;/p&gt;
+&lt;h2 id=&#34;朗斯基行列式求导&#34;&gt;朗斯基行列式求导
+&lt;/h2&gt;$$
+w[f(\lambda_1),\cdots,f(\lambda_n)]=\left|
+\begin{array}{c}
+f(\lambda_1) &amp;\cdots &amp;f^{(n-1)}(\lambda_1) &amp;f^{(n)}(\lambda_1) \\
+f(\lambda_2) &amp;\cdots &amp;f^{(n-1)}(\lambda_2) &amp;f^{(n)}(\lambda_2) \\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\
+f(\lambda_n) &amp;\cdots &amp;f^{(n-1)}(\lambda_n) &amp;f^{(n)}(\lambda_n)
+\end{array}
+\right|
+$$&lt;p&gt;将朗斯基行列式展开为$n!$项，对每一个乘积项应用莱布尼兹法则，再按照求导作用到的位置将所得到的$n\times n!$项分类，恢复成$n$个行列式，可以发现其中有$n-1$个行列式均为零（因为有相同的列），所以朗斯基行列式求导等于&lt;/p&gt;
+$$
+w_x[f(\lambda_1),\cdots,f(\lambda_n)]=\left|
+\begin{array}{c}
+f(\lambda_1) &amp;\cdots &amp;f^{(n-1)}(\lambda_1) &amp;f^{(n+1)}(\lambda_1) \\
+f(\lambda_2) &amp;\cdots &amp;f^{(n-1)}(\lambda_2) &amp;f^{(n+1)}(\lambda_2) \\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\
+f(\lambda_n) &amp;\cdots &amp;f^{(n-1)}(\lambda_n) &amp;f^{(n+1)}(\lambda_n)
+\end{array}
+\right|
+$$&lt;h2 id=&#34;分块矩阵行列式&#34;&gt;分块矩阵行列式
+&lt;/h2&gt;&lt;p&gt;分块矩阵求行列式有如下公式&lt;/p&gt;
+$$
+\left|
+\begin{array}{c}
+ A  &amp; B \\
+ C  &amp; D
+\end{array}
+\right| = |A| |D - C A^{-1} B|
+$$&lt;p&gt;应用到朗斯基行列式中有&lt;/p&gt;
+$$
+\begin{aligned}
+w[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda_{n+1})]&amp;=\left|
+\begin{array}{c}
+f(\lambda_1) &amp;\cdots  &amp;f^{(n)}(\lambda_1) &amp;f^{(n+1)}(\lambda_1) \\
+f(\lambda_2) &amp;\cdots  &amp;f^{(n)}(\lambda_2)  &amp;f^{(n+1)}(\lambda_2)\\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots  \\
+f(\lambda_n) &amp;\cdots &amp;f^{(n)}(\lambda_n) &amp;f^{(n+1)}(\lambda_n)\\
+f(\lambda_{n+1}) &amp;\cdots &amp;f^{(n)}(\lambda_{n+1})  &amp;f^{(n+1)}(\lambda_{n+1})
+\end{array} 
+\right|\\
+&amp;=w[f(\lambda_1),\cdots,f(\lambda_n)] ( f^{(n+1)}(\lambda_{n+1}) - C(\lambda_{n+1},n) W^{-1}(f(\lambda_1),\cdots,f(\lambda_n)) B(n+1,\lambda_{n}) )
+\end{aligned}
+$$$$
+\begin{aligned}
+w_x[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda_{n+1})]&amp;=\left|
+\begin{array}{c}
+f(\lambda_1) &amp;\cdots  &amp;f^{(n)}(\lambda_1) &amp;f^{(n+2)}(\lambda_1) \\
+f(\lambda_2) &amp;\cdots  &amp;f^{(n)}(\lambda_2)  &amp;f^{(n+2)}(\lambda_2)\\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots  \\
+f(\lambda_n) &amp;\cdots &amp;f^{(n)}(\lambda_n) &amp;f^{(n+2)}(\lambda_n)\\
+f(\lambda_{n+1}) &amp;\cdots &amp;f^{(n)}(\lambda_{n+1})  &amp;f^{(n+2)}(\lambda_{n+1})
+\end{array} 
+\right|\\
+&amp;=w[f(\lambda_1),\cdots,f(\lambda_n)] ( f^{(n+2)}(\lambda_{n+1}) - C(\lambda_{n+1},n) W^{-1}(f(\lambda_1),\cdots,f(\lambda_n)) B(n+2,\lambda_{n}) )
+\end{aligned}
+$$$$
+\begin{aligned}
+w[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda)]&amp;=\left|
+\begin{array}{c}
+f(\lambda_1) &amp;\cdots  &amp;f^{(n)}(\lambda_1) &amp;f^{(n+1)}(\lambda_1) \\
+f(\lambda_2) &amp;\cdots  &amp;f^{(n)}(\lambda_2)  &amp;f^{(n+1)}(\lambda_2)\\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots  \\
+f(\lambda_n) &amp;\cdots &amp;f^{(n)}(\lambda_n) &amp;f^{(n+1)}(\lambda_n)\\
+f(\lambda) &amp;\cdots &amp;f^{(n)}(\lambda)  &amp;f^{(n+1)}(\lambda)
+\end{array} 
+\right|\\
+&amp;=w[f(\lambda_1),\cdots,f(\lambda_n)] ( f^{(n+1)}(\lambda) - C(\lambda,n) W^{-1}(f(\lambda_1),\cdots,f(\lambda_n)) B(n+1,\lambda_{n}) )
+\end{aligned}
+$$$$
+\begin{aligned}
+w_x[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda)]&amp;=\left|
+\begin{array}{c}
+f(\lambda_1) &amp;\cdots  &amp;f^{(n)}(\lambda_1) &amp;f^{(n+2)}(\lambda_1) \\
+f(\lambda_2) &amp;\cdots  &amp;f^{(n)}(\lambda_2)  &amp;f^{(n+2)}(\lambda_2)\\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots  \\
+f(\lambda_n) &amp;\cdots &amp;f^{(n)}(\lambda_n) &amp;f^{(n+2)}(\lambda_n)\\
+f(\lambda) &amp;\cdots &amp;f^{(n)}(\lambda)  &amp;f^{(n+2)}(\lambda)
+\end{array} 
+\right|\\
+&amp;=w[f(\lambda_1),\cdots,f(\lambda_n)] ( f^{(n+2)}(\lambda) - C(\lambda,n) W^{-1}(f(\lambda_1),\cdots,f(\lambda_n)) B(n+2,\lambda_{n}) )
+\end{aligned}
+$$$$
+\begin{aligned}
+w[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda_{n+1}), f(\lambda)]&amp;=\left|
+\begin{array}{c}
+f(\lambda_1) &amp;\cdots  &amp;f^{(n)}(\lambda_1) &amp;f^{(n+1)}(\lambda_1) &amp;f^{(n+2)}(\lambda_1) \\
+f(\lambda_2) &amp;\cdots  &amp;f^{(n)}(\lambda_2)  &amp;f^{(n+1)}(\lambda_2) &amp;f^{(n+2)}(\lambda_2) \\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\
+f(\lambda_n) &amp;\cdots &amp;f^{(n)}(\lambda_n) &amp;f^{(n+1)}(\lambda_n)  &amp;f^{(n+2)}(\lambda_n) \\
+f(\lambda_{n+1}) &amp;\cdots &amp;f^{(n)}(\lambda_{n+1})  &amp;f^{(n+1)}(\lambda_{n+1})  &amp;f^{(n+2)}(\lambda_{n+1}) \\
+f(\lambda) &amp;\cdots &amp;f^{(n)}(\lambda)  &amp;f^{(n+1)}(\lambda)  &amp;f^{(n+2)}(\lambda)
+\end{array} 
+\right|\\
+&amp;=w[f(\lambda_1),\cdots,f(\lambda_n)]\left|
+\left(
+\begin{matrix}
+f^{(n+1)}(\lambda_{n+1}) &amp; f^{(n+2)}(\lambda_{n+1}) \\
+f^{(n+1)}(\lambda) &amp; f^{(n+2)}(\lambda)
+\end{matrix}
+\right)- 
+\left(
+\begin{matrix}
+C(\lambda_{n+1},n) \\
+C(\lambda,n)
+\end{matrix}
+\right)
+W^{-1}(f(\lambda_1),\cdots,f(\lambda_n)) 
+\left(
+\begin{matrix}
+B(n+1,\lambda_{n}) &amp; B(n+2,\lambda_{n})
+\end{matrix}
+\right)
+\right| \\
+&amp;=w[f(\lambda_1),\cdots,f(\lambda_n)]
+\left|
+\begin{array}{c}
+f^{(n+1)}(\lambda_{n+1}) - C(\lambda_{n+1},n) W^{-1}(f(\lambda_1),\cdots,f(\lambda_n)) B(n+1,\lambda_{n}) &amp; f^{(n+2)}(\lambda_{n+1}) - C(\lambda_{n+1},n) W^{-1}(f(\lambda_1),\cdots,f(\lambda_n)) B(n+2,\lambda_{n}) \\
+f^{(n+1)}(\lambda) - C(\lambda,n) W^{-1}(f(\lambda_1),\cdots,f(\lambda_n)) B(n+1,\lambda_{n}) &amp; f^{(n+2)}(\lambda) - C(\lambda,n) W^{-1}(f(\lambda_1),\cdots,f(\lambda_n)) B(n+2,\lambda_{n}) 
+\end{array}    
+\right| \\
+&amp;= \frac{w_x[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda)]w[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda_{n+1})] - w[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda)] w_x[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda_{n+1})]}{w[f(\lambda_1),\cdots,f(\lambda_n)]}
+\end{aligned}
+$$&lt;p&gt;其中&lt;/p&gt;
+$$
+\begin{aligned}
+W(f(\lambda_1),\cdots,f(\lambda_n)) &amp; =\left(
+\begin{array}{c}
+f(\lambda_1) &amp;\cdots &amp;f^{(n-1)}(\lambda_1) &amp;f^{(n)}(\lambda_1) \\
+f(\lambda_2) &amp;\cdots &amp;f^{(n-1)}(\lambda_2) &amp;f^{(n)}(\lambda_2) \\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\
+f(\lambda_n) &amp;\cdots &amp;f^{(n-1)}(\lambda_n) &amp;f^{(n)}(\lambda_n)
+\end{array}
+\right) \\
+C(\lambda_{n+1},n) &amp;= \left( 
+\begin{matrix}
+f(\lambda_{n+1}) &amp;\cdots &amp;f^{(n-1)}(\lambda_{n+1}) &amp;f^{(n)}(\lambda_{n+1})    
+\end{matrix}
+\right) \\
+C(\lambda,n) &amp;= \left( 
+\begin{matrix}
+f(\lambda) &amp;\cdots &amp;f^{(n-1)}(\lambda) &amp;f^{(n)}(\lambda)    
+\end{matrix}
+\right) \\
+B(n+1,\lambda_{n}) &amp;= \left(
+\begin{matrix}
+f^{(n+1)}(\lambda_1) \\
+\vdots \\
+f^{(n+1)}(\lambda_{n-1}) \\
+f^{(n+1)}(\lambda_{n})
+\end{matrix}
+\right) \\
+B(n+2,\lambda_{n}) &amp;= \left(
+\begin{matrix}
+f^{(n+2)}(\lambda_1) \\
+\vdots \\
+f^{(n+2)}(\lambda_{n-1}) \\
+f^{(n+2)}(\lambda_{n})
+\end{matrix}
+\right)
+\end{aligned}
+$$&lt;h2 id=&#34;归纳证明&#34;&gt;归纳证明
+&lt;/h2&gt;&lt;p&gt;假定$n$孤子解有如下形式&lt;/p&gt;
+$$
+\begin{cases}
+\phi[n] = \frac{w[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda)]}{w[f(\lambda_1),\cdots,f(\lambda_n)]} \\
+u[n] = 2[\ln w[f(\lambda_1),\cdots,f(\lambda_n)]]_{xx}
+\end{cases}
+$$&lt;p&gt;现在证明利用$f[n] = \frac{w[f(\lambda_1),\cdots,f(\lambda_{n}), f(\lambda_{n+1})]}{w[f(\lambda_1),\cdots,f(\lambda_{n})]}$进行达布变换后的$n+1$孤子解为&lt;/p&gt;
+$$
+\begin{cases}
+\phi[n+1] = \frac{w[f(\lambda_1),\cdots,f(\lambda_{n+1}), f(\lambda)]}{w[f(\lambda_1),\cdots,f(\lambda_{n+1})]} \\
+u[n+1] = 2[\ln w[f(\lambda_1),\cdots,f(\lambda_{n+1})]]_{xx}
+\end{cases}
+$$&lt;p&gt;$u[n+1]$的证明是显然的，所以下面主要关注$\phi[n+1]$&lt;/p&gt;
+$$
+\begin{aligned}
+&amp; \phi[n+1] =\phi_x[n] - \frac{f_x[n]}{f[n]}\phi[n]  \\
+&amp; = 
+\frac{w_x[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda)]w[f(\lambda_1),\cdots,f(\lambda_n)] - w[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda)] w_x[f(\lambda_1),\cdots,f(\lambda_n)]}{w^2[f(\lambda_1),\cdots,f(\lambda_n)]} \\
+&amp; \quad - \frac{w_x[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda_{n+1})]w[f(\lambda_1),\cdots,f(\lambda_n)] - w[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda_{n+1})] w_x[f(\lambda_1),\cdots,f(\lambda_n)]}{w^2[f(\lambda_1),\cdots,f(\lambda_n)]}
+\frac{w[f(\lambda_1),\cdots,f(\lambda_{n}),f(\lambda)]}{w[f(\lambda_1),\cdots,f(\lambda_{n}),f(\lambda_{n+1})]} \\
+&amp; = \frac{w_x[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda)]w[f(\lambda_1),\cdots,f(\lambda_{n}),f(\lambda_{n+1})]-w_x[f(\lambda_1),\cdots,f(\lambda_n), f(\lambda_{n+1})]w[f(\lambda_1),\cdots,f(\lambda_{n}),f(\lambda)]}{w[f(\lambda_1),\cdots,f(\lambda_n)] w[f(\lambda_1),\cdots,f(\lambda_{n}),f(\lambda_{n+1})]} \\
+\end{aligned}
+$$&lt;p&gt;利用上一小节证明的式子可以得到&lt;/p&gt;
+$$
+\phi[n+1]= \frac{w[f(\lambda_1),\cdots,f(\lambda_{n+1}), f(\lambda)]}{w[f(\lambda_1),\cdots,f(\lambda_{n+1})]}
+$$&lt;p&gt;
+这正是我们想要的结论。&lt;/p&gt;
+&lt;h2 id=&#34;题外话-贝克隆变换和非线性叠加&#34;&gt;题外话-贝克隆变换和非线性叠加
+&lt;/h2&gt;&lt;p&gt;另一种形式的$n$孤子解构造可以通过贝克隆变换后的非线性叠加公式得到，非常有趣。&lt;/p&gt;
+&lt;p&gt;定义$w$满足方程$w_t+3w_x^2+w_{xxx}=0$，对它求导可以得到$u=w_x$满足KdV方程。将上面的达布变换应用到$w$上&lt;/p&gt;
+$$
+\begin{cases}
+\bar{u} = u + 2(\ln f)_{xx} \\
+(\bar{w}=w + 2(\ln f)_x) \\
+f_{xx} + uf = \lambda f
+\end{cases}
+\Rightarrow
+\bar{w}_x-w_x=2\frac{f_{xx}f - f^2_x}{f^2}=2\lambda-2w_x-\frac{1}{2}(\bar{w}-w)^2
+$$$$
+\Rightarrow \bar{w}_x + w_x = 2\lambda - \frac{1}{2}(\bar{w}-w)^2
+$$&lt;p&gt;达布变换后$\bar{w}$依然满足$\bar{w}_t+3\bar{w}&lt;em&gt;x^2+\bar{w}&lt;/em&gt;{xxx}=0$，和$w$满足的方程作差得到&lt;/p&gt;
+$$
+\bar{w}_t - w_t + 3\bar{w}^2_x - 3 w^2_x + \bar{w}_{xxx} - w_{xxx} = 0
+$$&lt;p&gt;这两个方程允许我们从$w$得到$\bar{w}$。&lt;/p&gt;
+&lt;p&gt;假定我们从种子$w_0$出发通过参数为$\lambda_1$（$\lambda_2$）的变换得到了解$w_1$（$w_2$），然后再利用$w_1$通过参数为$\lambda_2$（$\lambda_1$）的变换得到了解$w_{12}$（$w_{21}$），令这两个解相等，就可以得到非线性叠加公式（也即从$w_1,w_2$出发代数叠加得到$w_{12}$）&lt;/p&gt;
+$$
+w_{12} = w_0 + \frac{4(\lambda_2 - \lambda_1)}{w_2 - w_1}
+$$&lt;p&gt;这种叠加可以一直进行下去构造多孤子解，如图所示
+&lt;img src=&#34;http://localhost:1313/slices/n-solitons-construction-of-kdv-eq/pics/nonlinear_superposition.png&#34;
+	width=&#34;1875&#34;
+	height=&#34;1338&#34;
+	srcset=&#34;http://localhost:1313/slices/n-solitons-construction-of-kdv-eq/pics/nonlinear_superposition_hu18441511561763319404.png 480w, http://localhost:1313/slices/n-solitons-construction-of-kdv-eq/pics/nonlinear_superposition_hu6500832748828998836.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
+	
+&gt;
+可以看出，$w_{12}=w_{21}$的对称化要求对于这种持续的构造是必要的。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Some Plots</title>
         <link>http://localhost:1313/slices/some-plots/</link>
         <pubDate>Sat, 08 Mar 2025 17:37:49 +0800</pubDate>
@@ -27,21 +353,8 @@
 		data-flex-basis=&#34;259px&#34;
 	
 &gt;
-（多年以后，又一次刷到这条新闻的时候，吴吴会想起他为做公选课视频硬描玻尔兹曼的那个下午）&lt;/p&gt;
+（多年以后，又一次刷到这条新闻的时候，Squid会想起他为做公选课视频硬描玻尔兹曼的那个下午）&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>N Solitons Construction</title>
-        <link>http://localhost:1313/slices/n-solitons-construction/</link>
-        <pubDate>Fri, 21 Feb 2025 21:48:49 +0800</pubDate>
-        
-        <guid>http://localhost:1313/slices/n-solitons-construction/</guid>
-        <description>&lt;p&gt;最近看了一点李翊神的《孤子与可积系统》，发现用达布变换构造的KdV方程的N孤子解形式很规则，感觉很新奇。但书中没有给出证明，这里试着自己推一遍。&lt;/p&gt;
-&lt;h2 id=&#34;达布定理&#34;&gt;达布定理
-&lt;/h2&gt;&lt;h2 id=&#34;朗斯基行列式求导&#34;&gt;朗斯基行列式求导
-&lt;/h2&gt;&lt;h2 id=&#34;分块矩阵行列式&#34;&gt;分块矩阵行列式
-&lt;/h2&gt;&lt;h2 id=&#34;归纳证明&#34;&gt;归纳证明
-&lt;/h2&gt;</description>
         </item>
         <item>
         <title>Bankrupt Probability</title>
