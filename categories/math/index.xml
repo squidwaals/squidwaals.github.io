@@ -7,9 +7,46 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Squid Wu</copyright><atom:link href="http://localhost:1313/categories/math/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Central Limit Theorem From RG</title>
+        <link>http://localhost:1313/slices/central-limit-theorem-from-rg/</link>
+        <pubDate>Sat, 17 May 2025 18:55:44 +0800</pubDate>
+        
+        <guid>http://localhost:1313/slices/central-limit-theorem-from-rg/</guid>
+        <description>&lt;p&gt;想起之前在知乎上看到《Phase Transition and Renormalization Group》书中有一个从重整化的角度得到中心极限定理的推导，感觉很有意思，记录一下。&lt;/p&gt;
+&lt;p&gt;假定有 $N=2^M$个独立同分布的随机变量 ${x_i}={x^{(0)}_i}$，概率密度函数记为 $f(x)=f^{(0)}(x)$。&lt;/p&gt;
+$$x^{(T)}_i=\frac{x^{(T-1)}_{2i-1}+x^{(T-1)}_{2i}}{2^\nu}$$$$x^{(T)}_i=\frac{x^{(T-1)}_{2i-1}+x^{(T-1)}_{2i}}{2^\nu}=\frac{x^{(T-2)}_{4i-3}+x^{(T-2)}_{4i-2}+x^{(T-2)}_{4i-1}+x^{(T-2)}_{4i}}{2^{2\nu}}=\cdots=\frac{\sum_{j=2^T i - 2^T+1}^{2^T i} x^{(0)}_j}{2^{T\nu}}$$$$x^{(M)}=x^{(M)}_1=\frac{\sum_{j=1}^N x^{(0)}_j}{N^\nu}$$$$
+\begin{aligned}
+F^{(T)}(x)&amp;=\int \theta\left(x-\frac{y+z}{2^{\nu}}\right)f^{(T-1)}(y)f^{(T-1)}(z)dydz \\
+&amp;=\int \theta\left(2^\nu x-y-z\right)f^{(T-1)}(y)f^{(T-1)}(z)dydz
+\end{aligned}
+$$$$
+\begin{aligned}
+f^{(T)}(x)&amp;=2^\nu\int\delta(2^\nu x-y-z)f^{(T-1)}(y)f^{(T-1)}(z)dydz \\
+&amp;=2^\nu \int f^{(T-1)}(2^\nu x-z)f^{(T-1)}(z)dz
+\end{aligned}
+$$$$
+\begin{aligned}
+f^{(T)}(k)&amp;=\int f^{(T)}(x)e^{-ikx}dx \\
+&amp;=2^\nu \int f^{(T-1)}(2^\nu x-z)e^{-ik x}f^{(T-1)}(z)dxdz \\
+&amp;= \int f^{(T-1)}(2^\nu x-z)e^{-ik(2^\nu x-z)/2^\nu}f^{(T-1)}(z)e^{-ikz/2^\nu} 2^\nu dxdz \\
+&amp;= \left(f^{(T-1)}(k/2^\nu)\right)^2
+\end{aligned}
+$$&lt;p&gt;取对数 $w^{(T)}(k)=\ln f^{(T)}(k)$，所以 $w^{(T)}(k)=2w^{(T-1)}(k/2^\nu)$。&lt;/p&gt;
+$$
+\kappa_n^{(T)}=2^{1-n\nu}\kappa_n^{(T-1)}
+$$$$
+w_{shifted}^{(M\to\infty)}(k)=-\frac{\text{Var}f}{2}k^2, \quad f_{shifted}^{(M\to\infty)}(k)=e^{-\frac{\text{Var}f}{2}k^2}
+$$$$
+f_{shifted}^{(M\to\infty)}(x)=\frac{1}{\sqrt{2\pi \text{Var}f}}e^{-\frac{x^2}{2\text{Var}f}}\Rightarrow f^{(M\to\infty)}(x)=\frac{1}{\sqrt{2\pi \text{Var}f}}e^{-\frac{(x-\braket{f})^2}{2\text{Var}f}}
+$$$$
+x^{(M\to\infty)}=\frac{\sum_{j=1}^N x_j^{(0)}}{\sqrt{N}}
+$$&lt;p&gt;所以这其实就是中心极限定理。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>N Solitons Construction of KdV eq</title>
         <link>http://localhost:1313/slices/n-solitons-construction-of-kdv-eq/</link>
-        <pubDate>Fri, 04 Apr 2025 17:40:49 +0800</pubDate>
+        <pubDate>Sat, 05 Apr 2025 17:40:49 +0800</pubDate>
         
         <guid>http://localhost:1313/slices/n-solitons-construction-of-kdv-eq/</guid>
         <description>&lt;p&gt;最近看了一点李翊神的《孤子与可积系统》，发现用达布变换构造的KdV方程的N孤子解形式很规则，感觉很新奇。但书中没有给出证明，这里试着自己推一遍。&lt;/p&gt;
@@ -329,7 +366,7 @@ $$&lt;p&gt;这种叠加可以一直进行下去构造多孤子解，如图所示
 		data-flex-basis=&#34;336px&#34;
 	
 &gt;
-可以看出，$w_{12}=w_{21}$的对称化要求对于这种持续的构造是必要的。&lt;/p&gt;
+可以看出，非线性叠加的参数对称化要求（$w_{21}=w_{12}$）对于这种持续的构造是必要的，因为需要不同的参数解作为种子。&lt;/p&gt;
 </description>
         </item>
         <item>
