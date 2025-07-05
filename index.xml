@@ -7,6 +7,95 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Squid Wu</copyright><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Companion Matrix</title>
+        <link>http://localhost:1313/slices/companion-matrix/</link>
+        <pubDate>Sat, 05 Jul 2025 13:14:24 +0800</pubDate>
+        
+        <guid>http://localhost:1313/slices/companion-matrix/</guid>
+        <description>&lt;p&gt;最近了解到多项式友矩阵的相关内容，好像挺基础的，但之前不知道，所以记录一下。&lt;/p&gt;
+&lt;h2 id=&#34;友矩阵&#34;&gt;友矩阵
+&lt;/h2&gt;&lt;p&gt;友矩阵的定义是&lt;/p&gt;
+$$
+A=\left(
+\begin{array}{c}
+0 &amp; 0 &amp;\cdots &amp;0 &amp;0 &amp; -c_0 \\
+1 &amp; 0 &amp;\cdots &amp;0 &amp;0 &amp; -c_1 \\
+0 &amp; 1 &amp;\cdots &amp;0 &amp;0 &amp; -c_2 \\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\
+0 &amp; 0 &amp;\cdots &amp;1 &amp;0 &amp; -c_{n-2}\\
+0 &amp; 0 &amp;\cdots &amp;0 &amp;1 &amp; -c_{n-1}
+\end{array}
+\right)
+$$&lt;p&gt;它的 $n$ 个特征值正好是多项式 $P(x)=x^n+c_{n-1}x^{n-1}+\cdots+c_0$ 的$n$个根。&lt;/p&gt;
+&lt;h2 id=&#34;证明&#34;&gt;证明
+&lt;/h2&gt;&lt;p&gt;可以计算矩阵 $A$ 的特征多项式直接证明&lt;/p&gt;
+$$
+\begin{aligned}
+|\lambda I - A| &amp;=\left|
+\begin{array}{c}
+\lambda &amp; 0 &amp;\cdots &amp;0 &amp;0 &amp; c_0 \\
+-1 &amp; \lambda &amp;\cdots &amp;0 &amp;0 &amp; c_1 \\
+0 &amp; -1 &amp;\cdots &amp;0 &amp;0 &amp; c_2 \\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\
+0 &amp; 0 &amp;\cdots &amp;-1 &amp;\lambda &amp; c_{n-2}\\
+0 &amp; 0 &amp;\cdots &amp;0 &amp;-1 &amp; \lambda+c_{n-1}
+\end{array}
+\right|_n \\
+&amp;= \lambda \left|
+\begin{array}{c}
+\lambda &amp; 0 &amp;\cdots &amp;0 &amp;0 &amp; c_1 \\
+-1 &amp; \lambda &amp;\cdots &amp;0 &amp;0 &amp; c_2 \\
+0 &amp; -1 &amp;\cdots &amp;0 &amp;0 &amp; c_3 \\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\
+0 &amp; 0 &amp;\cdots &amp;-1 &amp;\lambda &amp; c_{n-2}\\
+0 &amp; 0 &amp;\cdots &amp;0 &amp;-1 &amp; \lambda+c_{n-1}
+\end{array}
+\right|_{n-1}+(-1)^{n-1}c_0 \left|
+\begin{array}{c}
+-1 &amp; \lambda &amp;\cdots &amp;0 &amp;0  \\
+0 &amp; -1 &amp;\cdots &amp;0 &amp;0 \\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\
+0 &amp; 0 &amp;\cdots &amp;-1 &amp;\lambda \\
+0 &amp; 0 &amp;\cdots &amp;0 &amp;-1 
+\end{array}
+\right|_{n-1} \\
+&amp;= \lambda \left|
+\begin{array}{c}
+\lambda &amp; 0 &amp;\cdots &amp;0 &amp;0 &amp; c_1 \\
+-1 &amp; \lambda &amp;\cdots &amp;0 &amp;0 &amp; c_2 \\
+0 &amp; -1 &amp;\cdots &amp;0 &amp;0 &amp; c_3 \\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\
+0 &amp; 0 &amp;\cdots &amp;-1 &amp;\lambda &amp; c_{n-2}\\
+0 &amp; 0 &amp;\cdots &amp;0 &amp;-1 &amp; \lambda+c_{n-1}
+\end{array}
+\right|_{n-1}+c_0 \\
+&amp;= \lambda^2 \left|
+\begin{array}{c}
+\lambda &amp; 0 &amp;\cdots &amp;0 &amp;0 &amp; c_2 \\
+-1 &amp; \lambda &amp;\cdots &amp;0 &amp;0 &amp; c_3 \\
+0 &amp; -1 &amp;\cdots &amp;0 &amp;0 &amp; c_4 \\
+\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\
+0 &amp; 0 &amp;\cdots &amp;-1 &amp;\lambda &amp; c_{n-2}\\
+0 &amp; 0 &amp;\cdots &amp;0 &amp;-1 &amp; \lambda+c_{n-1}
+\end{array}
+\right|_{n-2}+\lambda c_1+c_0 \\
+&amp;=\cdots \\
+&amp;=\lambda^{n-1} |\lambda + c_{n-1}|_1 + \lambda^{n-2}c_{n-2}+\cdots+\lambda c_1+c_0 \\
+&amp;=\lambda^n + \lambda^{n-1}c_{n-1}+\cdots+ \lambda c_1 + c_0
+\end{aligned}
+$$&lt;p&gt;可见矩阵 $A$ 的特征多项式正好就是 $P(x)=x^n+c_{n-1}x^{n-1}+\cdots+c_0$，所以它的 $n$ 个特征值也就是对应多项式的 $n$ 个根。&lt;/p&gt;
+&lt;p&gt;一些数值库，比如numpy，就是通过对角化友矩阵来求多项式的根的。
+（那高次方程的根可以有解析表达式了？？不&amp;hellip;并没有，矩阵对角化的 QR 算法要无穷次迭代&amp;hellip;）&lt;/p&gt;
+&lt;h2 id=&#34;哪里会出现友矩阵&#34;&gt;哪里会出现友矩阵？
+&lt;/h2&gt;&lt;p&gt;在知乎上看到循环基中可以出现，在 Jinyu Li 的博客上看到多项式求余也可以导出友矩阵。两者类似，因为循环基和求余都涉及到把 $x^n$ 变成 $x^0,x^1,x^2,\cdots,x^{n-1}$ 。这里搬运一下后者。&lt;/p&gt;
+&lt;p&gt;对于任意的多项式 $F(x)$，令多项式求余 $F(x) \mod P(x)=R(x)$ 。&lt;/p&gt;
+&lt;p&gt;现在考虑一个新的多项式 $x F(x)$ ，同样关于 $P(x)$ 求余，记 $xF(x)\mod P(x)=S(x)$ 。由于 $R(x)$ 和 $S(x)$ 的次数均不超过 $n−1$ 次，用两个$n$ 维向量 $r,s\in R_n$ 分别表示 $x^0,x^1,x^2,\cdots , x^{n-1}$ 的系数。&lt;/p&gt;
+&lt;p&gt;考察 $R(x)$ 和 $S(x)$ 的系数向量之间的关系，将 $r\mapsto s$ 的映射记为 $M$。如果 $r=(\alpha,0,0\cdots,0)$，那么 $s=(0,\alpha,0,0,\cdots,0)$，如果 $r=(0,\alpha,0,0\cdots,0)$，那么 $s=(0,0,\alpha,0,0,\cdots,0)$&amp;hellip;&lt;/p&gt;
+&lt;p&gt;如果 $r=(0,0,\cdots,0,\alpha)$ ， 那么 $xR(x)$ 便为 $xR(x) = \alpha x^n = \alpha P(x)-\alpha c_0 - \alpha c_1 x - \cdots - \alpha c_{n-1} x^{n-1}$，所以此时 $s=(-\alpha c_0, -\alpha c_1, \cdots, -\alpha c_{n-1})$。&lt;/p&gt;
+&lt;p&gt;容易看出上述这些 $r$ 的线性组合会带来对应 $s$ 的线性组合（因为求余的性质），所以 $M$ 是一个线性映射，它的矩阵表示就是上面定义的 $A$，$s=A r$。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Central Limit Theorem From RG</title>
         <link>http://localhost:1313/slices/central-limit-theorem-from-rg/</link>
         <pubDate>Sat, 17 May 2025 18:55:44 +0800</pubDate>

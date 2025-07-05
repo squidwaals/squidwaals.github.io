@@ -14,17 +14,23 @@
         <guid>http://localhost:1313/slices/central-limit-theorem-from-rg/</guid>
         <description>&lt;p&gt;想起之前在知乎上看到《Phase Transition and Renormalization Group》书中有一个从重整化的角度得到中心极限定理的推导，感觉很有意思，记录一下。&lt;/p&gt;
 &lt;p&gt;假定有 $N=2^M$个独立同分布的随机变量 ${x_i}={x^{(0)}_i}$，概率密度函数记为 $f(x)=f^{(0)}(x)$。&lt;/p&gt;
-$$x^{(T)}_i=\frac{x^{(T-1)}_{2i-1}+x^{(T-1)}_{2i}}{2^\nu}$$$$x^{(T)}_i=\frac{x^{(T-1)}_{2i-1}+x^{(T-1)}_{2i}}{2^\nu}=\frac{x^{(T-2)}_{4i-3}+x^{(T-2)}_{4i-2}+x^{(T-2)}_{4i-1}+x^{(T-2)}_{4i}}{2^{2\nu}}=\cdots=\frac{\sum_{j=2^T i - 2^T+1}^{2^T i} x^{(0)}_j}{2^{T\nu}}$$$$x^{(M)}=x^{(M)}_1=\frac{\sum_{j=1}^N x^{(0)}_j}{N^\nu}$$$$
+&lt;p&gt;定义一次粗粒化过程为&lt;/p&gt;
+$$x^{(T)}_i=\frac{x^{(T-1)}_{2i-1}+x^{(T-1)}_{2i}}{2^\nu}$$&lt;p&gt;它由最初的变量写出来就是&lt;/p&gt;
+$$x^{(T)}_i=\frac{x^{(T-1)}_{2i-1}+x^{(T-1)}_{2i}}{2^\nu}=\frac{x^{(T-2)}_{4i-3}+x^{(T-2)}_{4i-2}+x^{(T-2)}_{4i-1}+x^{(T-2)}_{4i}}{2^{2\nu}}=\cdots=\frac{\sum_{j=2^T i - 2^T+1}^{2^T i} x^{(0)}_j}{2^{T\nu}}$$&lt;p&gt;$M$次粗粒化之后我们只剩下一个变量&lt;/p&gt;
+$$x^{(M)}=x^{(M)}_1=\frac{\sum_{j=1}^N x^{(0)}_j}{N^\nu}$$&lt;p&gt;现在考虑粗粒化过程造成的分布的变换。记$x^{(T)}_i$的累计分布函数为$F^{(T)}(x)$，它等于&lt;/p&gt;
+$$
 \begin{aligned}
 F^{(T)}(x)&amp;=\int \theta\left(x-\frac{y+z}{2^{\nu}}\right)f^{(T-1)}(y)f^{(T-1)}(z)dydz \\
 &amp;=\int \theta\left(2^\nu x-y-z\right)f^{(T-1)}(y)f^{(T-1)}(z)dydz
 \end{aligned}
-$$$$
+$$&lt;p&gt;对它求导就得到概率密度函数$f^{(T)}(x)$&lt;/p&gt;
+$$
 \begin{aligned}
 f^{(T)}(x)&amp;=2^\nu\int\delta(2^\nu x-y-z)f^{(T-1)}(y)f^{(T-1)}(z)dydz \\
 &amp;=2^\nu \int f^{(T-1)}(2^\nu x-z)f^{(T-1)}(z)dz
 \end{aligned}
-$$$$
+$$&lt;p&gt;这是一个卷积。作傅里叶变换 $f^{(T)}(k)=\int f^{(T)}(x)e^{-ikx}dx,f^{(T)}(x)=\frac{1}{2\pi}\int f^{(T)}(k)e^{ikx}dk$，可以得到&lt;/p&gt;
+$$
 \begin{aligned}
 f^{(T)}(k)&amp;=\int f^{(T)}(x)e^{-ikx}dx \\
 &amp;=2^\nu \int f^{(T-1)}(2^\nu x-z)e^{-ik x}f^{(T-1)}(z)dxdz \\
@@ -32,14 +38,19 @@ f^{(T)}(k)&amp;=\int f^{(T)}(x)e^{-ikx}dx \\
 &amp;= \left(f^{(T-1)}(k/2^\nu)\right)^2
 \end{aligned}
 $$&lt;p&gt;取对数 $w^{(T)}(k)=\ln f^{(T)}(k)$，所以 $w^{(T)}(k)=2w^{(T-1)}(k/2^\nu)$。&lt;/p&gt;
+&lt;p&gt;作累积量展开
+$w^{(T)}(k)=\sum_{n=1}^{\infty}\frac{(-i)^n}{n!}\kappa ^{(T)}_n k^n$ （$\kappa _0^{(T)}$等于零因为$f^{(T)}(k=0)=1$），$\kappa_1^{(T)}$是$f^{(T)}(x)$的均值，$\kappa_2^{(T)}$是$f^{(T)}(x)$的方差。容易看出各阶累积量的变换规则为&lt;/p&gt;
 $$
 \kappa_n^{(T)}=2^{1-n\nu}\kappa_n^{(T-1)}
-$$$$
+$$&lt;p&gt;对于 $\nu=1/2$的情况，$\kappa_{n&amp;gt;2}^{(T)}$在变换中渐渐趋于零，$\kappa_{2}^{(T)}$保持不变，$\kappa_1^{(T)}$渐渐发散。对于扣除掉均值的随机变量${x^{(0)}_i-\braket{f(x)}}$，经过$M\to\infty$次变换后，一阶累积量始终等于零，高阶累积量趋于零，所以只剩下二阶累积量&lt;/p&gt;
+$$
 w_{shifted}^{(M\to\infty)}(k)=-\frac{\text{Var}f}{2}k^2, \quad f_{shifted}^{(M\to\infty)}(k)=e^{-\frac{\text{Var}f}{2}k^2}
-$$$$
+$$&lt;p&gt;逆傅里叶变换就得到&lt;/p&gt;
+$$
 f_{shifted}^{(M\to\infty)}(x)=\frac{1}{\sqrt{2\pi \text{Var}f}}e^{-\frac{x^2}{2\text{Var}f}}\Rightarrow f^{(M\to\infty)}(x)=\frac{1}{\sqrt{2\pi \text{Var}f}}e^{-\frac{(x-\braket{f})^2}{2\text{Var}f}}
-$$$$
-x^{(M\to\infty)}=\frac{\sum_{j=1}^N x_j^{(0)}}{\sqrt{N}}
+$$&lt;p&gt;注意到 $\nu=1/2$时，我们最终得到的随机变量也就是&lt;/p&gt;
+$$
+x^{(M\to\infty)}=\lim_{N\to\infty}\frac{\sum_{j=1}^N x_j^{(0)}}{\sqrt{N}}
 $$&lt;p&gt;所以这其实就是中心极限定理。&lt;/p&gt;
 </description>
         </item>
