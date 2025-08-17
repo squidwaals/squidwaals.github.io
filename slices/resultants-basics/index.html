@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="破产概率（带吸收璧的随机行走）">
-<title>Bankrupt Probability</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="结式的一些基础知识">
+<title>Resultants Basics</title>
 
-<link rel='canonical' href='http://localhost:1313/slices/bankrupt-probability/'>
+<link rel='canonical' href='http://localhost:1313/slices/resultants-basics/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Bankrupt Probability">
-<meta property='og:description' content="破产概率（带吸收璧的随机行走）">
-<meta property='og:url' content='http://localhost:1313/slices/bankrupt-probability/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Resultants Basics">
+<meta property='og:description' content="结式的一些基础知识">
+<meta property='og:url' content='http://localhost:1313/slices/resultants-basics/'>
 <meta property='og:site_name' content='Squid&#39;s Home'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Display' /><meta property='article:published_time' content='2025-01-05T18:32:40&#43;08:00'/><meta property='article:modified_time' content='2025-02-21T21:46:55&#43;08:00'/>
-<meta name="twitter:title" content="Bankrupt Probability">
-<meta name="twitter:description" content="破产概率（带吸收璧的随机行走）">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Display' /><meta property='article:published_time' content='2025-08-17T18:12:59&#43;08:00'/><meta property='article:modified_time' content='2025-08-17T22:13:20&#43;08:00'/>
+<meta name="twitter:title" content="Resultants Basics">
+<meta name="twitter:description" content="结式的一些基础知识">
     <link rel="shortcut icon" href="/image/favicon.ico" />
 
     </head>
@@ -215,7 +215,47 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#sylvester行列式">Sylvester行列式</a></li>
+    <li><a href="#多项式公共根">多项式公共根</a>
+      <ol>
+        <li><a href="#步骤1结式为零--存在非零多项式-u-v-满足-uf--vg">步骤1：结式为零 ⇨ 存在非零多项式 $u, v$ 满足 $uf = vg$</a></li>
+        <li><a href="#步骤2存在非零-u-v-满足-uf--vg--f-g-有公共因子">步骤2：存在非零 $u, v$ 满足 $uf = vg$ ⇨ $f, g$ 有公共因子</a></li>
+        <li><a href="#步骤3f-g-有公共因子--结式为零">步骤3：$f, g$ 有公共因子 ⇨ 结式为零</a></li>
+      </ol>
+    </li>
+    <li><a href="#根表达式">根表达式</a></li>
+    <li><a href="#乘法性质">乘法性质</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -238,12 +278,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/slices/bankrupt-probability/">Bankrupt Probability</a>
+            <a href="/slices/resultants-basics/">Resultants Basics</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            破产概率（带吸收璧的随机行走）
+            结式的一些基础知识
         </h3>
         
     </div>
@@ -264,7 +304,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Jan 05, 2025</time>
+                <time class="article-time--published">Aug 17, 2025</time>
             </div>
         
 
@@ -280,55 +320,109 @@
     <section class="article-content">
     
     
-    <p>最近了解到交易中破产概率的计算，觉得很有意思，也比较简单，记录一下。</p>
-<p>假定一个交易者胜率为$p$，每次止盈止损额度均为$s$，总亏损上限为$Ns$，那么他在市场上的破产概率$P_{b,N}$为</p>
+    <p>之前了解到和结式相关的一些内容，感觉挺神奇的，跟着ai快速学习了一下，也稍微翻了翻范德瓦尔登的代数学，记录一下。</p>
+<h2 id="sylvester行列式">Sylvester行列式
+</h2><p>在代数学中，结式（Resultant） 是一个用于研究多项式方程组解的重要工具，主要用于判断两个多项式是否有公共根。</p>
+<p>设两个一元多项式：</p>
+<p>$
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_0 \quad (a_n \neq 0)
+$</p>
+<p>$
+g(x) = b_m x^m + b_{m-1} x^{m-1} + \dots + b_0 \quad (b_m \neq 0)
+$</p>
+<p>它们的结式是一个由系数 $a_i, b_j$ 构成的行列式（Sylvester行列式），记为 $\text{Res}(f, g)$。其构造规则为：</p>
+<ul>
+<li>行列式共有 $n + m$ 行，前 $m$ 行由 $f(x)$ 的系数（从 $a_n$ 到 $a_0$）重复排列，每行向右移一位（空位补0）；</li>
+<li>后 $n$ 行由 $g(x)$ 的系数（从 $b_m$ 到 $b_0$）重复排列，同样每行向右移一位（空位补0）。</li>
+</ul>
 $$
-P_{b,N} = 
-\begin{cases}
- & \left(\frac{1-p}{p}\right)^N  & p\geq 0.5  \\
- & 1  & p\leq 0.5
-\end{cases}.
-$$<h2 id="推导">推导
-</h2><p>假定交易者A和B进行交易，每次止盈止损额度均为$s$，A、B的总亏损上限分别为$Ns,Ms$，A的胜率为$p$。计算足够次数交易后，A把钱全部输给B的概率$P_{b,N}^M$，然后令$M\to\infty$得到$P_b$。</p>
-<p>设A在拥有亏损额度$ns$时，破产概率为$P_{b,n}^M$。交易一次后，A有概率$p$拥有$(n+1)s$亏损额度，概率$(1-p)$拥有$(n-1)s$亏损额度，于是</p>
+\text{Res}(f,g) = 
+\begin{vmatrix}
+a_n & a_{n-1} & \cdots & a_0 & 0 & \cdots & \cdots & 0 \\
+0 & a_n & a_{n-1} & \cdots & a_0 & \cdots & \cdots & 0 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
+0 & 0 & \cdots & a_n & a_{n-1} & \cdots & \cdots & a_0 \\
+b_m& b_{m-1} & \cdots & b_1 & b_0 & \cdots & \cdots & 0 \\
+0 & b_m & b_{m-1} & \cdots & b_1 & \cdots & \cdots & 0 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
+0 & 0 & \cdots & b_m & b_{m-1} & \cdots & b_1 & b_0\\
+\end{vmatrix}
+$$<h2 id="多项式公共根">多项式公共根
+</h2><p>两个多项式 $f(x)$ 和 $g(x)$ 有公共根的充要条件是它们的结式为0，即 $\text{Res}(f, g) = 0$。</p>
+<p>证明核心思路:
+结式为零等价于“存在非零多项式 $u(x), v(x)$ 使得 $u(x)f(x) = v(x)g(x)$，且 $\deg u &lt; m，\deg v &lt; n$”，而这又等价于 $f$ 和 $g$ 有公共因子。</p>
+<h3 id="步骤1结式为零--存在非零多项式-u-v-满足-uf--vg">步骤1：结式为零 ⇨ 存在非零多项式 $u, v$ 满足 $uf = vg$
+</h3><p>结式 $\text{Res}(f, g)$ 是某线性方程组系数矩阵的行列式。具体来说，考虑以下方程：</p>
+$$ u(x)f(x) = v(x)g(x), $$<p>其中 $ u(x) = c_{m-1}x^{m-1} + \dots + c_0，v(x) = -d_{n-1}x^{n-1} - \dots - d_0 $。</p>
+<p>两边展开后，同次幂的系数必须相等。对于 $x^k (k = 0, 1, \dots, n+m-1)$，系数等式构成一个线性方程组，</p>
 $$
-P_{b,n}^M = (1-p)P_{b,n-1}^M + pP_{b,n+1}^M \Rightarrow
-(1-p)(P_{b,n}^M - P_{b,n-1}^M) = p (P_{b,n+1}^M - P_{b,n}^M),
-$$$$
-\Rightarrow P^M_{b,n+1} - P^M_{b,n} = C_0\left(\frac{1-p}{p}\right)^n,
-$$<p>其中$C_0=P^M_{b,1}-P^M_{b,0}$为常数。求和可以得到</p>
-$$
-P^M_{b,n}-P^M_{b,0}=
 \begin{cases}
- & C_0 \frac{1-(1/p-1)^n}{2-1/p},  & p\neq 0.5 \\
- & n C_0,   & p=0.5
-\end{cases}.
-$$$$
-C_0 = 
-\begin{cases}
- & -\frac{2-1/p}{1-(1/p-1)^{N+M}},  & p\neq 0.5 \\
- & -\frac{1}{N+M},   & p=0.5
-\end{cases}.
-$$<p>于是</p>
-$$
-P^M_{b,N} = 
-\begin{cases}
- & 1 - \frac{1-(1/p-1)^N}{1-(1/p-1)^{N+M}} = \frac{(1/p-1)^N-(1/p-1)^{N+M}}{1-(1/p-1)^{N+M}},  & p\neq 0.5 \\
- & 1 - \frac{N}{N+M} = \frac{M}{N+M},  & p=0.5
-\end{cases}.
-$$<p>取$M\to\infty$，</p>
-$$
-P_{b,N} = \lim_{M\to\infty} P^M_{b,N} = 
-\begin{cases}
- & \lim_{M\to\infty} \frac{(1/p-1)^N-(1/p-1)^{N+M}}{1-(1/p-1)^{N+M}}=
- \begin{cases}
-  & 1, &p < 0.5 \\
-  & \left(\frac{1-p}{p}\right)^N, &p > 0.5
- \end{cases},  & p\neq 0.5\\
- & \lim_{M\to\infty} \frac{M}{N+M}=1   & p=0.5
+c_{m-1} a_n  + d_{n-1} b_m &= 0 \\
+c_{m-1} a_{n-1}  + c_{m-2} a_n + d_{n-2} b_{m-1} + d_{n-1} b_m &= 0 \\
+\vdots \\
+c_0 a_0 + d_0 b_0 &=0 \\
 \end{cases}
-$$<p>这就证明了开头的结论。</p>
-
+$$<p>其系数矩阵正是结式的行列式对应矩阵的转置。</p>
+<p>若 $\text{Res}(f, g) = 0$，则该线性方程组有非零解 $(c_{m-1}, \dots, c_{0}, d_{n-1}, \dots, d_{0})$，即存在非零多项式 $u, v$ 使得 $uf = vg$。</p>
+<h3 id="步骤2存在非零-u-v-满足-uf--vg--f-g-有公共因子">步骤2：存在非零 $u, v$ 满足 $uf = vg$ ⇨ $f, g$ 有公共因子
+</h3><p>假设 $uf = vg$，其中 $u \neq 0，v \neq 0$，且 $\deg u &lt; m，\deg v &lt; n$。</p>
+<p>由于 $f$ 和 $g$ 非零，可设它们的最大公因子为 $d(x)$，即 $f = d \cdot f_1，g = d \cdot g_1$，其中 $\gcd(f_1, g_1) = 1$（互素）。</p>
+<p>代入等式得 $u d f_1 = v d g_1$，约去 $d$ 后有 $u f_1 = v g_1$。因 $f_1$ 与 $g_1$ 互素，故 $f_1$ 必整除 $v$，$g_1$ 必整除 $u$。</p>
+<p>若 $d(x)$ 为常数（即 $f, g$ 互素），则 $f_1 = f，g_1 = g$，此时 $f$ 整除 $v$，$g$ 整除 $u$。但 $\deg v &lt; n = \deg f$，$\deg u &lt; m = \deg g$，故 $v$ 只能是零多项式，与 $v \neq 0$ 矛盾。</p>
+<p>因此，$d(x)$ 必为次数至少1的多项式，即 $f$ 和 $g$ 有非平凡公共因子。</p>
+<h3 id="步骤3f-g-有公共因子--结式为零">步骤3：$f, g$ 有公共因子 ⇨ 结式为零
+</h3><p>若 $f$ 和 $g$ 有公共根 $\alpha$（或公共因子 $h(x) = (x - \alpha) \dots$），则 $f(\alpha) = 0$ 且 $g(\alpha) = 0$。</p>
+<p>考虑向量 $\boldsymbol{\alpha} = (\alpha^{n+m-1}, \alpha^{n+m-2}, \dots, \alpha, 1)^T$，代入结式的行列式矩阵 $M$ 中，可验证 $M \boldsymbol{\alpha} = \boldsymbol{0}$ ：</p>
+<ul>
+<li>前 m 行：$a_n \alpha^{n+m-k} + a_{n-1} \alpha^{n+m-k-1} + \dots + a_0 \alpha^{m-k} = \alpha^{m-k} f(\alpha) = 0$（k 为行索引）；</li>
+<li>后 n 行：$b_m \alpha^{2m+n-k} + b_m \alpha^{2m+n-k-1} + \dots + b_0 \alpha^{m+n-k} = \alpha^{m+n-k} g(\alpha) = 0$（k 为行索引）。</li>
+</ul>
+<p>因此，矩阵 $M$ 有非零解 $\boldsymbol{\alpha}$，行列式 $\text{Res}(f, g) = 0$。</p>
+<p>结式的这种和多项式公共根有关的性质可以用到解多项式方程组中。
+比如在解二元多项式方程组 $f(x, y) = 0$ 和 $g(x, y) = 0$ 时，可将 $f, g$ 视为关于 $x$ 的多项式（视 $y$ 为常数），其结式 $\text{Res}_x(f, g)$ 是关于 $y$ 的多项式，该多项式的根即为方程组解中 $y$ 的可能值（消去了 $x$）。</p>
+<h2 id="根表达式">根表达式
+</h2><p>有了多项式公共根的性质，可以证明结式有一个漂亮简洁的多项式根的表达式。</p>
+<p>设${\alpha_i}$是$f(x)$的根，${\beta_j}$是$g(x)$的根，$f(x)=a_n\prod_{i=1}^n(x-\alpha_i)$，$g(x)=b_m \prod_{j=1}^m (x-\beta_j)$，多项式系数${a_i},{b_i}$是根的多项式，从而结式是根的多项式函数。</p>
+<p>固定$f(x)$的 $n-1$ 个根不变，固定$g(x)$的 $m-1$ 个根不变，将剩下的 $\alpha_i$，$\beta_j$ 当作变量。由结式的公共根性质可知，当 $\alpha_i=\beta_j$ 的时候，$\text{Res}(f,g)=0$。又由于结式是根的多项式函数，所以</p>
+$$
+\text{Res}(f,g)\propto (\alpha_i-\beta_j)^{p},p\geq 1 .
+$$<p>这种性质对任意一对${\alpha_i,\beta_j}$均成立，所以</p>
+$$
+\text{Res}(f,g)\propto \prod_{i=1}^n\prod_{j=1}^m (\alpha_i-\beta_j)^{p_{ij}},p_{ij}\geq 1 .
+$$<p>注意到，对于任何根$\alpha_i,\beta_j$，多项式系数${a_i},{b_i}$是根的一次函数，从Sylvester行列式的表达式可以看出 $\text{Res}(f,g)$ 中 $\alpha_i$ 的最高次数是 $m$ 次，$\beta_j$ 的最高次数是 $n$ 次，所以 $p_{ij} = 1$。</p>
+<p>此外，由于 $a_n$ 是系数${a_i}$ 的公共因子，$b_m$ 是系数 ${b_j}$ 的公共因子，所以</p>
+$$
+\text{Res}(f,g)\propto a_n^m b_m^n \prod_{i=1}^n\prod_{j=1}^m (\alpha_i-\beta_j).
+$$<p>现在确定比例系数。考虑到 $b_0=b_m \prod_{j=1}^m (-\beta_j)$，从而上式右侧 $b_0$ 最高次项的系数为 $a_n^m$。而从Sylvester行列式看，$b_0$ 次数最高的行列式展开项就是沿着主对角线的乘积项，它的系数也是$a_n^m$。</p>
+<p>所以比例系数就等于1，结式可以写成</p>
+$$
+\text{Res}(f, g) = a_n^m b_m^n \prod_{i=1}^n\prod_{j=1}^m (\alpha_i - \beta_j)= a_n^m \prod_{i=1}^n g(\alpha_i) = (-1)^{mn} \cdot b_m^n \prod_{j=1}^m f(\beta_j).
+$$<h2 id="乘法性质">乘法性质
+</h2><p>从结式的根表达式可以直接看出结式的乘法性质。</p>
+<p>设三个一元多项式：</p>
+<p>$
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_0=a_n\prod_{i=1}^n (x-\alpha_i) \quad (a_n \neq 0)，
+$</p>
+<p>$
+g(x) = b_m x^m + b_{m-1} x^{m-1} + \dots + b_0=b_m\prod_{j=1}^m (x-\beta_j) \quad (b_m \neq 0)，
+$</p>
+<p>$
+h(x) = c_l x^l + c_{l-1} x^{l-1} + \dots + c_0=c_l\prod_{k=1}^l(x-\gamma_k) \quad (c_l \neq 0)，
+$</p>
+<p>容易看出</p>
+$$
+\begin{aligned}
+\text{Res}(fg,h)&= (a_n b_m)^l c_l^{m+n} \prod_{i=1}^{n}\prod_{k=1}^l (\alpha_i-\gamma_k) \prod_{j=1}^{m}\prod_{k=1}^l  (\beta_j - \gamma_k) \\
+&= \left(a_n^l c_l^n  \prod_{i=1}^{n}\prod_{k=1}^l (\alpha_i-\gamma_k)\right) \left( b_m^l c_l^m \prod_{j=1}^{m}\prod_{k=1}^l  (\beta_j - \gamma_k) \right) \\
+&= \text{Res}(f,h) \text{Res}(g,h)
+\end{aligned},
+$$$$
+\begin{aligned}
+\text{Res}(f,gh)&= a_n^{m+l} {(b_m c_l)}^{n} \prod_{i=1}^{n}\prod_{j=1}^m (\alpha_i-\beta_j) \prod_{i=1}^{n}\prod_{k=1}^l  (\alpha_i - \gamma_k) \\
+&= \left(a_n^m b_m^n  \prod_{i=1}^{n}\prod_{j=1}^m (\alpha_i-\beta_j) \right) \left(a_n^l c_l^n \prod_{i=1}^{n}\prod_{k=1}^l  (\alpha_i - \gamma_k) \right)\\
+&= \text{Res}(f,g) \text{Res}(f,h)
+\end{aligned}.
+$$
 </section>
 
 
@@ -351,7 +445,7 @@ $$<p>这就证明了开头的结论。</p>
 
 
         <span>
-            Last updated on Feb 21, 2025
+            Last updated on Aug 17, 2025
         </span>
     </section></footer>
 
@@ -394,19 +488,6 @@ $$<p>这就证明了开头的结论。</p>
             
                 
 <article class="">
-    <a href="/slices/resultants-basics/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Resultants Basics</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
     <a href="/slices/companion-matrix/">
         
         
@@ -439,6 +520,19 @@ $$<p>这就证明了开头的结论。</p>
 
         <div class="article-details">
             <h2 class="article-title">N Solitons Construction of KdV eq</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/slices/bankrupt-probability/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bankrupt Probability</h2>
         </div>
     </a>
 </article>
