@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Squid Wu</copyright>
-        <lastBuildDate>Sun, 23 Mar 2025 17:32:49 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/file/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 13 Sep 2025 19:04:53 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/file/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Collections of Notes</title>
         <link>http://localhost:1313/slices/collections-of-notes/</link>
         <pubDate>Sat, 18 Jan 2025 15:13:00 +0800</pubDate>
@@ -39,6 +39,7 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/legendre_trans.pdf&#34; &gt;勒让德变换&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/residue.pdf&#34; &gt;留数定理&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/jacobi_det.pdf&#34; &gt;雅可比行列式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/plemelj.pdf&#34; &gt;普莱姆利公式&lt;/a&gt;（更多内容可以看 &lt;a class=&#34;link&#34; href=&#34;notes_dir/Plemelj_Howard_E_Haber.pdf&#34; &gt;Howard E. Haber 的note&lt;/a&gt;）&lt;/p&gt;
 </description>
         </item>
         <item>

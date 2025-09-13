@@ -14,7 +14,7 @@
         <guid>http://localhost:1313/slices/resultants-basics/</guid>
         <description>&lt;p&gt;之前了解到和结式相关的一些内容，感觉挺神奇的，跟着ai快速学习了一下，也稍微翻了翻范德瓦尔登的代数学，记录一下。&lt;/p&gt;
 &lt;h2 id=&#34;sylvester行列式&#34;&gt;Sylvester行列式
-&lt;/h2&gt;&lt;p&gt;在代数学中，结式（Resultant） 是一个用于研究多项式方程组解的重要工具，主要用于判断两个多项式是否有公共根（或公共因子）。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;在代数学中，结式（Resultant） 是一个用于研究多项式方程组解的重要工具，主要用于判断两个多项式是否有公共根。&lt;/p&gt;
 &lt;p&gt;设两个一元多项式：&lt;/p&gt;
 &lt;p&gt;$
 f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_0 \quad (a_n \neq 0)
@@ -611,6 +611,7 @@ $$&lt;p&gt;这种叠加可以一直进行下去构造多孤子解，如图所示
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/legendre_trans.pdf&#34; &gt;勒让德变换&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/residue.pdf&#34; &gt;留数定理&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/jacobi_det.pdf&#34; &gt;雅可比行列式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/plemelj.pdf&#34; &gt;普莱姆利公式&lt;/a&gt;（更多内容可以看 &lt;a class=&#34;link&#34; href=&#34;notes_dir/Plemelj_Howard_E_Haber.pdf&#34; &gt;Howard E. Haber 的note&lt;/a&gt;）&lt;/p&gt;
 </description>
         </item>
         <item>
