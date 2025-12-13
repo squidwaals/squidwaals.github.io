@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="持续收集使用符号计算的一些例子">
-<title>Examples of Symbolic Calc</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="反旋转项会让声子数趋于无穷吗？">
+<title>Counter Rotating Term</title>
 
-<link rel='canonical' href='http://localhost:1313/slices/examples-of-symbolic-calc/'>
+<link rel='canonical' href='http://localhost:1313/slices/counter-rotating-term/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Examples of Symbolic Calc">
-<meta property='og:description' content="持续收集使用符号计算的一些例子">
-<meta property='og:url' content='http://localhost:1313/slices/examples-of-symbolic-calc/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Counter Rotating Term">
+<meta property='og:description' content="反旋转项会让声子数趋于无穷吗？">
+<meta property='og:url' content='http://localhost:1313/slices/counter-rotating-term/'>
 <meta property='og:site_name' content='Squid&#39;s Home'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='File' /><meta property='article:published_time' content='2024-04-30T10:52:28&#43;08:00'/><meta property='article:modified_time' content='2025-02-22T18:04:38&#43;08:00'/>
-<meta name="twitter:title" content="Examples of Symbolic Calc">
-<meta name="twitter:description" content="持续收集使用符号计算的一些例子">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Display' /><meta property='article:published_time' content='2025-12-13T18:29:29&#43;08:00'/><meta property='article:modified_time' content='2025-12-13T21:39:14&#43;08:00'/>
+<meta name="twitter:title" content="Counter Rotating Term">
+<meta name="twitter:description" content="反旋转项会让声子数趋于无穷吗？">
     <link rel="shortcut icon" href="/image/favicon.ico" />
 
     </head>
@@ -237,8 +237,9 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#mathematica">Mathematica</a></li>
-    <li><a href="#sympy">Sympy</a></li>
+    <li><a href="#声子数期望">声子数期望</a></li>
+    <li><a href="#位置动量算符">位置动量算符</a></li>
+    <li><a href="#玻戈留玻夫变换">玻戈留玻夫变换</a></li>
   </ol>
 </nav>
         </div>
@@ -261,21 +262,17 @@
                 Physics
             </a>
         
-            <a href="/categories/tech/" style="background-color: #a89285; color: #fff;">
-                Tech
-            </a>
-        
     </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/slices/examples-of-symbolic-calc/">Examples of Symbolic Calc</a>
+            <a href="/slices/counter-rotating-term/">Counter Rotating Term</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            持续收集使用符号计算的一些例子
+            反旋转项会让声子数趋于无穷吗？
         </h3>
         
     </div>
@@ -296,7 +293,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 30, 2024</time>
+                <time class="article-time--published">Dec 13, 2025</time>
             </div>
         
 
@@ -312,17 +309,198 @@
     <section class="article-content">
     
     
-    <h2 id="mathematica">Mathematica
-</h2><p><a class="link" href="code_dir/AngleIntegratedToCGPackage.m" >球谐函数积分化为CG系数</a>（AngleIntegratedToCGPackage）</p>
-<p><a class="link" href="code_dir/spherical_matrix_elements.nb" >利用上面的包AngleIntegratedToCGPackage计算角向矩阵元</a>（重复<a class="link" href="https://doi.org/10.1103/PhysRevLett.130.183001"  target="_blank" rel="noopener"
-    >这篇文章</a>补充材料中的S15式）</p>
-<p><a class="link" href="code_dir/QuantumSimplificationPackage.m" >$\braket{bar|ket}$的内积直积化简</a>（QuantumSimplificationPackage：去掉运算符的保护，重新定义化简规则）</p>
-<p><a class="link" href="code_dir/microwave_shielding.nb" >利用上面的包QuantumSimplificationPackage计算哈密顿量矩阵元</a>（重复<a class="link" href="https://doi.org/10.1103/PhysRevLett.130.183001"  target="_blank" rel="noopener"
-    >这篇文章</a>补充材料中的S1小结）</p>
-<p><a class="link" href="code_dir/show_bspline.nb" >利用一些技巧得到节点为变量时B样条的显式表达式</a>（mma中好像只能直接得到节点为常数时B样条表达式）</p>
-<h2 id="sympy">Sympy
-</h2><p><a class="link" href="code_dir/compare_series_and_exact_solution.ipynb" >表达式中途展开+符号变量替换求复杂色散关系展开式</a>（重复<a class="link" href="https://doi.org/10.1103/PhysRevLett.125.253601"  target="_blank" rel="noopener"
-    >这篇文章</a>中的色散关系）</p>
+    <p>之前想了一个简单的问题，反旋转项（counter rotating term）会不会让声子数发散？
+直觉上声子数最小是零，最大是无穷，所以反旋转项的存在似乎会让态矢中包含越来越高的声子数基，所以声子数会发散。</p>
+<p>果真如此吗？从声子数期望来说好像并不是这样。</p>
+<h2 id="声子数期望">声子数期望
+</h2><p>考虑一个最简单的例子，厄密的哈密顿量 $H=\omega a^\dagger a + \eta^* a^\dagger a^\dagger + \eta a a$。</p>
+<p>$\eta$ 的相位可以吸收到 $a$ 里面，所以 $\eta$ 可以认为是实数，$H=\omega a^\dagger a + \eta a^\dagger a^\dagger + \eta a a$。</p>
+<p>由于 $[(a^\dagger)^m a^n, (a^\dagger)^u a^v]=\sum_{p,q}C_{p,q} (a^\dagger)^p a^q$，其中 $p+q\leq m+n +u+v - 2$，</p>
+<p>所以对于二次型哈密顿量，二次型观测量满足的海森堡方程是封闭的，它们的演化方程写为</p>
+$$
+\frac{d}{dt}
+\left(
+\begin{matrix}
+{\langle a a\rangle} \\
+{\langle a^\dagger a\rangle} \\
+{\langle a^\dagger a^\dagger \rangle} 
+\end{matrix}
+\right)=
+\left(
+\begin{matrix}
+-2i\omega & -4i\eta & 0 \\
+2i\eta & 0 & -2i\eta \\
+0 & 4i\eta & 2i\omega
+\end{matrix}
+\right) 
+\left(
+\begin{matrix}
+{\langle a a\rangle} \\
+{\langle a^\dagger a\rangle} \\
+{\langle a^\dagger a^\dagger \rangle} 
+\end{matrix}
+\right)
++
+\left(
+\begin{matrix}
+-2i\eta \\
+0 \\
+2i\eta
+\end{matrix}
+\right)
+= M \left(
+\begin{matrix}
+{\langle a a\rangle} \\
+{\langle a^\dagger a\rangle} \\
+{\langle a^\dagger a^\dagger \rangle} 
+\end{matrix}
+\right)
++
+\left(
+\begin{matrix}
+-2i\eta \\
+0 \\
+2i\eta
+\end{matrix}
+\right)
+$$<p>用符号计算库发现 $M$ 矩阵可以被对角化 $P^{-1} M P = D$，$P,D$的形式为</p>
+$$
+P=
+\left(
+\begin{matrix}
+1 & \frac{-2\eta^{2}+\omega^{2}-i\omega\sqrt{4\eta^{2}-\omega^{2}}}{2\eta^{2}} & \frac{-2\eta^{2}+\omega^{2}+i\omega\sqrt{4\eta^{2}-\omega^{2}}}{2\eta^{2}} \\
+-\frac{\omega}{2\eta} & \frac{-\omega+i\sqrt{4\eta^{2}-\omega^{2}}}{2\eta} & \frac{-\omega-i\sqrt{4\eta^{2}-\omega^{2}}}{2\eta} \\
+1 & 1 & 1
+\end{matrix}
+\right),
+$$$$
+P^{-1}=
+\left(
+\begin{matrix}
+\frac{2\eta^{2}}{4\eta^{2}-\omega^{2}} & \frac{2\eta\omega}{4\eta^{2}-\omega^{2}} & \frac{2\eta^{2}}{4\eta^{2}-\omega^{2}} \\
+-\frac{\eta^{2}}{4\eta^{2}-\omega^{2}} & \frac{2\eta^{3}\omega-2i\eta^{3}\sqrt{4\eta^{2}-\omega^{2}}}{8\eta^4-6\eta^2\omega^2+4i\eta^2\omega\sqrt{4\eta^2-\omega^2}+\omega^4-i\omega^3\sqrt{4\eta^2-\omega^2}} & \frac{2\eta^{4}}{8\eta^4-6\eta^2\omega^2+4i\eta^2\omega\sqrt{4\eta^2-\omega^2}+\omega^4-i\omega^3\sqrt{4\eta^2-\omega^2}} \\
+-\frac{\eta^{2}}{4\eta^{2}-\omega^{2}} & \frac{4i\eta^{3}-i\eta\omega^{2}-\eta\omega\sqrt{4\eta^{2}-\omega^{2}}}{4\eta^{2}\sqrt{4\eta^{2}-\omega^{2}}-\omega^{2}\sqrt{4\eta^{2}-\omega^{2}}} & \frac{4i\eta^{2}\omega+2\eta^{2}\sqrt{4\eta^{2}-\omega^{2}}-i\omega^{3}-\omega^{2}\sqrt{4\eta^{2}-\omega^{2}}}{8\eta^{2}\sqrt{4\eta^{2}-\omega^{2}}-2\omega^{2}\sqrt{4\eta^{2}-\omega^{2}}}
+\end{matrix}
+\right),
+$$$$
+D=
+\left(
+\begin{matrix}
+0 & 0 & 0 \\
+0 & -2\sqrt{(2\eta-\omega)(2\eta+\omega)} & 0 \\
+0 & 0 & 2\sqrt{(2\eta-\omega)(2\eta+\omega)}
+\end{matrix}
+\right).
+$$<p>可以看到，$\omega &lt; 2\eta$ 时，$M$ 矩阵有正实数本征值，所以声子数会发散。</p>
+<p>而 $\omega &gt; 2\eta$ 的时候，$M$ 矩阵本征值为零和纯虚数。用 $P^{-1}$ 作用到原方程之后，第二行和第三行的新变量满足的时间演化方程为 $\dot{x}=-i a x + b$，其中$a$为实数，它给出振荡的解。又由于</p>
+$$
+P^{-1} \left(
+\begin{matrix}
+-2i\eta \\
+0 \\
+2i\eta
+\end{matrix}
+\right)=
+\left(
+\begin{matrix}
+0 \\
+(*1) \\
+(*2)
+\end{matrix}
+\right)
+$$<p>所以第一行的新变量满足的方程即为 $\dot{x}=0$，从而三个新变量不发散。变换回去，声子数期望也不发散。</p>
+<h2 id="位置动量算符">位置动量算符
+</h2><p>后来意识到这个问题其实用 $x,p$ 算符来看可能能看出 $\omega - 2\eta$ 是否大于零的区别</p>
+$$
+x=\frac{a+a^\dagger}{\sqrt{2}},p= \frac{a-a^\dagger}{\sqrt{2}i},
+$$$$
+\begin{aligned}
+H & =\omega a^\dagger a + \eta a^\dagger a^\dagger + \eta a a  = (\omega-2\eta) a^\dagger a + \eta a^\dagger a^\dagger + \eta a a + \eta a^\dagger a + \eta a a^\dagger - \eta \\
+&= (\omega-2\eta)\left(\frac{x^2}{2}+\frac{p^2}{2}\right) +  2\eta x^2-\frac{\omega}{2}
+\end{aligned}.
+$$<p>$\omega&gt;2\eta$ 的时候，如果对 $x,p$ 做 rescaling（保持对易关系不变），这依然是一个谐振子的哈密顿量，能量下有界。</p>
+<p>$\omega&lt;2\eta$ 的时候，这变成一个能量无下界的哈密顿量，因为 $\bra{x=0}H\ket{x=0}=-\infty$。
+这时候如果对 $x,p$ 做 rescaling，哈密顿量可以化成一个生成压缩态的哈密顿量，系统随时间增长不断被压缩，沿$x-p$平面上某个方向的涨落越来越大，所以 rescaling 之前的 $x^2$ 应该也是越来越大。</p>
+<h2 id="玻戈留玻夫变换">玻戈留玻夫变换
+</h2><p>当然了毕竟是一个比较简单的二次型哈密顿量，那比较正统的做法应该是玻戈留玻夫变换&hellip;直接让ai写</p>
+<p>哈密顿量</p>
+$$
+H = \omega a^\dagger a + \eta a^\dagger a^\dagger + \eta a a,
+$$<p>引入新的玻色算符 $b$ 和 $b^\dagger$，满足 $[b, b^\dagger] = 1$。变换形式为</p>
+$$
+a = u b + v b^\dagger, \quad a^\dagger = u b^\dagger + v b,
+$$<p>其中 $u$ 和 $v$ 为实数参数，满足 $u^2 - v^2 = 1$ 以保持对易关系。将 $u,v$ 参数化</p>
+$$
+u = \cosh r, \quad v = \sinh r.
+$$<p>代入原哈密顿量，计算各项</p>
+$$
+a^\dagger a = (u^2 + v^2) b^\dagger b + u v (b^\dagger b^\dagger + b b) + v^2，
+$$$$
+a^\dagger a^\dagger = u^2 b^\dagger b^\dagger + 2 u v b^\dagger b + u v + v^2 b b，
+$$$$
+a a = u^2 b b + 2 u v b^\dagger b + u v + v^2 b^\dagger b^\dagger.
+$$<p>于是得到</p>
+$$
+H = \left[ \omega (u^2 + v^2) + 4 \eta u v \right] b^\dagger b + \left[ \omega u v + \eta (u^2 + v^2) \right] (b^\dagger b^\dagger + b b) + \left[ \omega v^2 + 2 \eta u v \right].
+$$<p>为消除非对角项 $b^\dagger b^\dagger$ 和 $b b$，设其系数为零</p>
+$$
+\omega u v + \eta (u^2 + v^2) = 0. 
+$$<p>利用双曲函数性质</p>
+$$
+\cosh r \sinh r = \frac{1}{2} \sinh 2r, \quad \cosh^2 r + \sinh^2 r = \cosh 2r,
+$$<p>方程变为</p>
+$$
+\frac{\omega}{2} \sinh 2r + \eta \cosh 2r = 0 \Rightarrow \tanh 2r = -\frac{2\eta}{\omega}.
+$$<p>记对角化后哈密顿量为</p>
+$$
+H = \Omega b^\dagger b + E_0,
+$$<p>其中 $\Omega$ 是 $b^\dagger b$ 的系数，$E_0$ 是常数项。</p>
+<p>计算 $\Omega$：</p>
+$$
+\Omega = \omega (u^2 + v^2) + 4 \eta u v.
+$$<p>代入 $u^2 + v^2 = \cosh 2r$, $u v = \frac{1}{2} \sinh 2r$,</p>
+$$
+\Omega = \omega \cosh 2r + 2 \eta \sinh 2r.
+$$<p>注意到 $\tanh 2r = -\frac{2\eta}{\omega}$，所以</p>
+$$
+\cosh 2r = \frac{1}{\sqrt{1 - \tanh^2 2r}} = \frac{\omega}{\sqrt{\omega^2 - 4\eta^2}}, \quad \sinh 2r = \frac{t}{\sqrt{1 - \tanh^2 2r}} = -\frac{2\eta}{\sqrt{\omega^2 - 4\eta^2}}.
+$$<p>代入 $\Omega$ 得到</p>
+$$
+\begin{aligned}
+\Omega &= \omega \cdot \frac{\omega}{\sqrt{\omega^2 - 4\eta^2}} + 2 \eta \cdot \left( -\frac{2\eta}{\sqrt{\omega^2 - 4\eta^2}} \right) \\
+&= \frac{\omega^2}{\sqrt{\omega^2 - 4\eta^2}} - \frac{4\eta^2}{\sqrt{\omega^2 - 4\eta^2}} \\
+&= \frac{\omega^2 - 4\eta^2}{\sqrt{\omega^2 - 4\eta^2}} = \sqrt{\omega^2 - 4\eta^2}.
+\end{aligned}
+$$<p>因此</p>
+$$
+\Omega = \sqrt{\omega^2 - 4\eta^2}.
+$$<p>计算 $E_0$：</p>
+$$
+E_0 = \omega v^2 + 2 \eta u v.
+$$<p>代入 $v^2 = \sinh^2 r = \frac{\cosh 2r - 1}{2}$, $u v = \frac{1}{2} \sinh 2r$,</p>
+$$
+\begin{aligned}
+E_0  &= \frac{\omega}{2} (\cosh 2r - 1) + \eta \sinh 2r \\
+ &= \frac{\omega}{2} \left( \frac{\omega}{\Omega} - 1 \right) + \eta \left( -\frac{2\eta}{\Omega} \right) \\
+&= \frac{\omega (\omega - \Omega)}{2\Omega} - \frac{2\eta^2}{\Omega}.
+\end{aligned}
+$$<p>利用 $\Omega^2 = \omega^2 - 4\eta^2$，</p>
+$$
+\begin{aligned}
+E_0 &= \frac{\omega^2 - \omega \Omega - 4\eta^2}{2\Omega} \\
+&= \frac{\Omega^2 - \omega \Omega}{2\Omega} \\
+&= \frac{\Omega - \omega}{2}.
+\end{aligned}
+$$<p>因此</p>
+$$
+E_0 = \frac{\Omega - \omega}{2}. 
+$$<p>所以最终哈密顿量对角化为：</p>
+$$
+H = \Omega b^\dagger b + E_0,
+$$<p>其中</p>
+$$
+\Omega = \sqrt{\omega^2 - 4\eta^2}, \quad E_0 = \frac{\Omega - \omega}{2}.
+$$<p>容易看出 $\omega^2 &lt; 4\eta^2$ 时系统有虚频。</p>
 
 </section>
 
@@ -331,7 +509,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/file/">File</a>
+            <a href="/tags/display/">Display</a>
         
     </section>
 
@@ -346,7 +524,7 @@
 
 
         <span>
-            Last updated on Feb 22, 2025
+            Last updated on Dec 13, 2025
         </span>
     </section></footer>
 
@@ -388,6 +566,19 @@
         <div class="flex article-list--tile">
             
                 
+<article class="">
+    <a href="/slices/central-limit-theorem-from-rg/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Central Limit Theorem From RG</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
 <article class="has-image">
     <a href="/slices/collections-of-notes/">
         
@@ -413,25 +604,12 @@
             
                 
 <article class="">
-    <a href="/slices/counter-rotating-term/">
+    <a href="/slices/examples-of-symbolic-calc/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Counter Rotating Term</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/slices/central-limit-theorem-from-rg/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Central Limit Theorem From RG</h2>
+            <h2 class="article-title">Examples of Symbolic Calc</h2>
         </div>
     </a>
 </article>

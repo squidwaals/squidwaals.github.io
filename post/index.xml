@@ -7,7 +7,207 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Squid Wu</copyright>
-        <lastBuildDate>Sat, 13 Sep 2025 19:26:15 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 13 Dec 2025 21:39:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Counter Rotating Term</title>
+        <link>http://localhost:1313/slices/counter-rotating-term/</link>
+        <pubDate>Sat, 13 Dec 2025 18:29:29 +0800</pubDate>
+        
+        <guid>http://localhost:1313/slices/counter-rotating-term/</guid>
+        <description>&lt;p&gt;之前想了一个简单的问题，反旋转项（counter rotating term）会不会让声子数发散？
+直觉上声子数最小是零，最大是无穷，所以反旋转项的存在似乎会让态矢中包含越来越高的声子数基，所以声子数会发散。&lt;/p&gt;
+&lt;p&gt;果真如此吗？从声子数期望来说好像并不是这样。&lt;/p&gt;
+&lt;h2 id=&#34;声子数期望&#34;&gt;声子数期望
+&lt;/h2&gt;&lt;p&gt;考虑一个最简单的例子，厄密的哈密顿量 $H=\omega a^\dagger a + \eta^* a^\dagger a^\dagger + \eta a a$。&lt;/p&gt;
+&lt;p&gt;$\eta$ 的相位可以吸收到 $a$ 里面，所以 $\eta$ 可以认为是实数，$H=\omega a^\dagger a + \eta a^\dagger a^\dagger + \eta a a$。&lt;/p&gt;
+&lt;p&gt;由于 $[(a^\dagger)^m a^n, (a^\dagger)^u a^v]=\sum_{p,q}C_{p,q} (a^\dagger)^p a^q$，其中 $p+q\leq m+n +u+v - 2$，&lt;/p&gt;
+&lt;p&gt;所以对于二次型哈密顿量，二次型观测量满足的海森堡方程是封闭的，它们的演化方程写为&lt;/p&gt;
+$$
+\frac{d}{dt}
+\left(
+\begin{matrix}
+{\langle a a\rangle} \\
+{\langle a^\dagger a\rangle} \\
+{\langle a^\dagger a^\dagger \rangle} 
+\end{matrix}
+\right)=
+\left(
+\begin{matrix}
+-2i\omega &amp; -4i\eta &amp; 0 \\
+2i\eta &amp; 0 &amp; -2i\eta \\
+0 &amp; 4i\eta &amp; 2i\omega
+\end{matrix}
+\right) 
+\left(
+\begin{matrix}
+{\langle a a\rangle} \\
+{\langle a^\dagger a\rangle} \\
+{\langle a^\dagger a^\dagger \rangle} 
+\end{matrix}
+\right)
++
+\left(
+\begin{matrix}
+-2i\eta \\
+0 \\
+2i\eta
+\end{matrix}
+\right)
+= M \left(
+\begin{matrix}
+{\langle a a\rangle} \\
+{\langle a^\dagger a\rangle} \\
+{\langle a^\dagger a^\dagger \rangle} 
+\end{matrix}
+\right)
++
+\left(
+\begin{matrix}
+-2i\eta \\
+0 \\
+2i\eta
+\end{matrix}
+\right)
+$$&lt;p&gt;用符号计算库发现 $M$ 矩阵可以被对角化 $P^{-1} M P = D$，$P,D$的形式为&lt;/p&gt;
+$$
+P=
+\left(
+\begin{matrix}
+1 &amp; \frac{-2\eta^{2}+\omega^{2}-i\omega\sqrt{4\eta^{2}-\omega^{2}}}{2\eta^{2}} &amp; \frac{-2\eta^{2}+\omega^{2}+i\omega\sqrt{4\eta^{2}-\omega^{2}}}{2\eta^{2}} \\
+-\frac{\omega}{2\eta} &amp; \frac{-\omega+i\sqrt{4\eta^{2}-\omega^{2}}}{2\eta} &amp; \frac{-\omega-i\sqrt{4\eta^{2}-\omega^{2}}}{2\eta} \\
+1 &amp; 1 &amp; 1
+\end{matrix}
+\right),
+$$$$
+P^{-1}=
+\left(
+\begin{matrix}
+\frac{2\eta^{2}}{4\eta^{2}-\omega^{2}} &amp; \frac{2\eta\omega}{4\eta^{2}-\omega^{2}} &amp; \frac{2\eta^{2}}{4\eta^{2}-\omega^{2}} \\
+-\frac{\eta^{2}}{4\eta^{2}-\omega^{2}} &amp; \frac{2\eta^{3}\omega-2i\eta^{3}\sqrt{4\eta^{2}-\omega^{2}}}{8\eta^4-6\eta^2\omega^2+4i\eta^2\omega\sqrt{4\eta^2-\omega^2}+\omega^4-i\omega^3\sqrt{4\eta^2-\omega^2}} &amp; \frac{2\eta^{4}}{8\eta^4-6\eta^2\omega^2+4i\eta^2\omega\sqrt{4\eta^2-\omega^2}+\omega^4-i\omega^3\sqrt{4\eta^2-\omega^2}} \\
+-\frac{\eta^{2}}{4\eta^{2}-\omega^{2}} &amp; \frac{4i\eta^{3}-i\eta\omega^{2}-\eta\omega\sqrt{4\eta^{2}-\omega^{2}}}{4\eta^{2}\sqrt{4\eta^{2}-\omega^{2}}-\omega^{2}\sqrt{4\eta^{2}-\omega^{2}}} &amp; \frac{4i\eta^{2}\omega+2\eta^{2}\sqrt{4\eta^{2}-\omega^{2}}-i\omega^{3}-\omega^{2}\sqrt{4\eta^{2}-\omega^{2}}}{8\eta^{2}\sqrt{4\eta^{2}-\omega^{2}}-2\omega^{2}\sqrt{4\eta^{2}-\omega^{2}}}
+\end{matrix}
+\right),
+$$$$
+D=
+\left(
+\begin{matrix}
+0 &amp; 0 &amp; 0 \\
+0 &amp; -2\sqrt{(2\eta-\omega)(2\eta+\omega)} &amp; 0 \\
+0 &amp; 0 &amp; 2\sqrt{(2\eta-\omega)(2\eta+\omega)}
+\end{matrix}
+\right).
+$$&lt;p&gt;可以看到，$\omega &amp;lt; 2\eta$ 时，$M$ 矩阵有正实数本征值，所以声子数会发散。&lt;/p&gt;
+&lt;p&gt;而 $\omega &amp;gt; 2\eta$ 的时候，$M$ 矩阵本征值为零和纯虚数。用 $P^{-1}$ 作用到原方程之后，第二行和第三行的新变量满足的时间演化方程为 $\dot{x}=-i a x + b$，其中$a$为实数，它给出振荡的解。又由于&lt;/p&gt;
+$$
+P^{-1} \left(
+\begin{matrix}
+-2i\eta \\
+0 \\
+2i\eta
+\end{matrix}
+\right)=
+\left(
+\begin{matrix}
+0 \\
+(*1) \\
+(*2)
+\end{matrix}
+\right)
+$$&lt;p&gt;所以第一行的新变量满足的方程即为 $\dot{x}=0$，从而三个新变量不发散。变换回去，声子数期望也不发散。&lt;/p&gt;
+&lt;h2 id=&#34;位置动量算符&#34;&gt;位置动量算符
+&lt;/h2&gt;&lt;p&gt;后来意识到这个问题其实用 $x,p$ 算符来看可能能看出 $\omega - 2\eta$ 是否大于零的区别&lt;/p&gt;
+$$
+x=\frac{a+a^\dagger}{\sqrt{2}},p= \frac{a-a^\dagger}{\sqrt{2}i},
+$$$$
+\begin{aligned}
+H &amp; =\omega a^\dagger a + \eta a^\dagger a^\dagger + \eta a a  = (\omega-2\eta) a^\dagger a + \eta a^\dagger a^\dagger + \eta a a + \eta a^\dagger a + \eta a a^\dagger - \eta \\
+&amp;= (\omega-2\eta)\left(\frac{x^2}{2}+\frac{p^2}{2}\right) +  2\eta x^2-\frac{\omega}{2}
+\end{aligned}.
+$$&lt;p&gt;$\omega&amp;gt;2\eta$ 的时候，如果对 $x,p$ 做 rescaling（保持对易关系不变），这依然是一个谐振子的哈密顿量，能量下有界。&lt;/p&gt;
+&lt;p&gt;$\omega&amp;lt;2\eta$ 的时候，这变成一个能量无下界的哈密顿量，因为 $\bra{x=0}H\ket{x=0}=-\infty$。
+这时候如果对 $x,p$ 做 rescaling，哈密顿量可以化成一个生成压缩态的哈密顿量，系统随时间增长不断被压缩，沿$x-p$平面上某个方向的涨落越来越大，所以 rescaling 之前的 $x^2$ 应该也是越来越大。&lt;/p&gt;
+&lt;h2 id=&#34;玻戈留玻夫变换&#34;&gt;玻戈留玻夫变换
+&lt;/h2&gt;&lt;p&gt;当然了毕竟是一个比较简单的二次型哈密顿量，那比较正统的做法应该是玻戈留玻夫变换&amp;hellip;直接让ai写&lt;/p&gt;
+&lt;p&gt;哈密顿量&lt;/p&gt;
+$$
+H = \omega a^\dagger a + \eta a^\dagger a^\dagger + \eta a a,
+$$&lt;p&gt;引入新的玻色算符 $b$ 和 $b^\dagger$，满足 $[b, b^\dagger] = 1$。变换形式为&lt;/p&gt;
+$$
+a = u b + v b^\dagger, \quad a^\dagger = u b^\dagger + v b,
+$$&lt;p&gt;其中 $u$ 和 $v$ 为实数参数，满足 $u^2 - v^2 = 1$ 以保持对易关系。将 $u,v$ 参数化&lt;/p&gt;
+$$
+u = \cosh r, \quad v = \sinh r.
+$$&lt;p&gt;代入原哈密顿量，计算各项&lt;/p&gt;
+$$
+a^\dagger a = (u^2 + v^2) b^\dagger b + u v (b^\dagger b^\dagger + b b) + v^2，
+$$$$
+a^\dagger a^\dagger = u^2 b^\dagger b^\dagger + 2 u v b^\dagger b + u v + v^2 b b，
+$$$$
+a a = u^2 b b + 2 u v b^\dagger b + u v + v^2 b^\dagger b^\dagger.
+$$&lt;p&gt;于是得到&lt;/p&gt;
+$$
+H = \left[ \omega (u^2 + v^2) + 4 \eta u v \right] b^\dagger b + \left[ \omega u v + \eta (u^2 + v^2) \right] (b^\dagger b^\dagger + b b) + \left[ \omega v^2 + 2 \eta u v \right].
+$$&lt;p&gt;为消除非对角项 $b^\dagger b^\dagger$ 和 $b b$，设其系数为零&lt;/p&gt;
+$$
+\omega u v + \eta (u^2 + v^2) = 0. 
+$$&lt;p&gt;利用双曲函数性质&lt;/p&gt;
+$$
+\cosh r \sinh r = \frac{1}{2} \sinh 2r, \quad \cosh^2 r + \sinh^2 r = \cosh 2r,
+$$&lt;p&gt;方程变为&lt;/p&gt;
+$$
+\frac{\omega}{2} \sinh 2r + \eta \cosh 2r = 0 \Rightarrow \tanh 2r = -\frac{2\eta}{\omega}.
+$$&lt;p&gt;记对角化后哈密顿量为&lt;/p&gt;
+$$
+H = \Omega b^\dagger b + E_0,
+$$&lt;p&gt;其中 $\Omega$ 是 $b^\dagger b$ 的系数，$E_0$ 是常数项。&lt;/p&gt;
+&lt;p&gt;计算 $\Omega$：&lt;/p&gt;
+$$
+\Omega = \omega (u^2 + v^2) + 4 \eta u v.
+$$&lt;p&gt;代入 $u^2 + v^2 = \cosh 2r$, $u v = \frac{1}{2} \sinh 2r$,&lt;/p&gt;
+$$
+\Omega = \omega \cosh 2r + 2 \eta \sinh 2r.
+$$&lt;p&gt;注意到 $\tanh 2r = -\frac{2\eta}{\omega}$，所以&lt;/p&gt;
+$$
+\cosh 2r = \frac{1}{\sqrt{1 - \tanh^2 2r}} = \frac{\omega}{\sqrt{\omega^2 - 4\eta^2}}, \quad \sinh 2r = \frac{t}{\sqrt{1 - \tanh^2 2r}} = -\frac{2\eta}{\sqrt{\omega^2 - 4\eta^2}}.
+$$&lt;p&gt;代入 $\Omega$ 得到&lt;/p&gt;
+$$
+\begin{aligned}
+\Omega &amp;= \omega \cdot \frac{\omega}{\sqrt{\omega^2 - 4\eta^2}} + 2 \eta \cdot \left( -\frac{2\eta}{\sqrt{\omega^2 - 4\eta^2}} \right) \\
+&amp;= \frac{\omega^2}{\sqrt{\omega^2 - 4\eta^2}} - \frac{4\eta^2}{\sqrt{\omega^2 - 4\eta^2}} \\
+&amp;= \frac{\omega^2 - 4\eta^2}{\sqrt{\omega^2 - 4\eta^2}} = \sqrt{\omega^2 - 4\eta^2}.
+\end{aligned}
+$$&lt;p&gt;因此&lt;/p&gt;
+$$
+\Omega = \sqrt{\omega^2 - 4\eta^2}.
+$$&lt;p&gt;计算 $E_0$：&lt;/p&gt;
+$$
+E_0 = \omega v^2 + 2 \eta u v.
+$$&lt;p&gt;代入 $v^2 = \sinh^2 r = \frac{\cosh 2r - 1}{2}$, $u v = \frac{1}{2} \sinh 2r$,&lt;/p&gt;
+$$
+\begin{aligned}
+E_0  &amp;= \frac{\omega}{2} (\cosh 2r - 1) + \eta \sinh 2r \\
+ &amp;= \frac{\omega}{2} \left( \frac{\omega}{\Omega} - 1 \right) + \eta \left( -\frac{2\eta}{\Omega} \right) \\
+&amp;= \frac{\omega (\omega - \Omega)}{2\Omega} - \frac{2\eta^2}{\Omega}.
+\end{aligned}
+$$&lt;p&gt;利用 $\Omega^2 = \omega^2 - 4\eta^2$，&lt;/p&gt;
+$$
+\begin{aligned}
+E_0 &amp;= \frac{\omega^2 - \omega \Omega - 4\eta^2}{2\Omega} \\
+&amp;= \frac{\Omega^2 - \omega \Omega}{2\Omega} \\
+&amp;= \frac{\Omega - \omega}{2}.
+\end{aligned}
+$$&lt;p&gt;因此&lt;/p&gt;
+$$
+E_0 = \frac{\Omega - \omega}{2}. 
+$$&lt;p&gt;所以最终哈密顿量对角化为：&lt;/p&gt;
+$$
+H = \Omega b^\dagger b + E_0,
+$$&lt;p&gt;其中&lt;/p&gt;
+$$
+\Omega = \sqrt{\omega^2 - 4\eta^2}, \quad E_0 = \frac{\Omega - \omega}{2}.
+$$&lt;p&gt;容易看出 $\omega^2 &amp;lt; 4\eta^2$ 时系统有虚频。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Resultants Basics</title>
         <link>http://localhost:1313/slices/resultants-basics/</link>
         <pubDate>Sun, 17 Aug 2025 18:12:59 +0800</pubDate>
