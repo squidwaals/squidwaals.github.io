@@ -7,6 +7,65 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Squid Wu</copyright><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Some Photos</title>
+        <link>http://localhost:1313/slices/some-photos/</link>
+        <pubDate>Sat, 28 Feb 2026 22:17:16 +0800</pubDate>
+        
+        <guid>http://localhost:1313/slices/some-photos/</guid>
+        <description>&lt;h2 id=&#34;小烟花&#34;&gt;小烟花
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slices/some-photos/pics/firework.jpg&#34;
+	width=&#34;1706&#34;
+	height=&#34;1279&#34;
+	srcset=&#34;http://localhost:1313/slices/some-photos/pics/firework_hu3846958648115441571.jpg 480w, http://localhost:1313/slices/some-photos/pics/firework_hu16702825361089488059.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;车窗外&#34;&gt;车窗外
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slices/some-photos/pics/whitefield.jpg&#34;
+	width=&#34;1706&#34;
+	height=&#34;1279&#34;
+	srcset=&#34;http://localhost:1313/slices/some-photos/pics/whitefield_hu7104254398711134495.jpg 480w, http://localhost:1313/slices/some-photos/pics/whitefield_hu12666648271677433761.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slices/some-photos/pics/greenfield.jpg&#34;
+	width=&#34;1706&#34;
+	height=&#34;1279&#34;
+	srcset=&#34;http://localhost:1313/slices/some-photos/pics/greenfield_hu15018911353191471195.jpg 480w, http://localhost:1313/slices/some-photos/pics/greenfield_hu17435723228028631453.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;木屑&#34;&gt;木屑
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slices/some-photos/pics/sawdust.jpg&#34;
+	width=&#34;1681&#34;
+	height=&#34;1260&#34;
+	srcset=&#34;http://localhost:1313/slices/some-photos/pics/sawdust_hu17359089425347819652.jpg 480w, http://localhost:1313/slices/some-photos/pics/sawdust_hu12507482908894300039.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Counter Rotating Term</title>
         <link>http://localhost:1313/slices/counter-rotating-term/</link>
         <pubDate>Sat, 13 Dec 2025 18:29:29 +0800</pubDate>
@@ -842,7 +901,8 @@ $$&lt;p&gt;这种叠加可以一直进行下去构造多孤子解，如图所示
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/legendre_trans.pdf&#34; &gt;勒让德变换&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/residue.pdf&#34; &gt;留数定理&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/jacobi_det.pdf&#34; &gt;雅可比行列式&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/plemelj.pdf&#34; &gt;普莱姆利公式&lt;/a&gt;（更多内容可以看 &lt;a class=&#34;link&#34; href=&#34;notes_dir/Plemelj_Howard_E_Haber.pdf&#34; &gt;Howard E. Haber 的note&lt;/a&gt;）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;notes_dir/plemelj.pdf&#34; &gt;普莱姆利公式&lt;/a&gt;（更多内容可以看 &lt;a class=&#34;link&#34; href=&#34;https://scipp-legacy.pbsci.ucsc.edu/~haber/ph215/Plemelj18.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Howard E. Haber 的note&lt;/a&gt;）&lt;/p&gt;
 </description>
         </item>
         <item>
